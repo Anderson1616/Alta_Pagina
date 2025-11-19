@@ -1,0 +1,255 @@
+﻿<app-shared-header></app-shared-header>
+
+<main class="shareplex" aria-label="SharePlex">
+  <section class="shareplex__hero">
+    <div class="shareplex__hero-overlay">
+      <div class="shareplex__hero-content">
+        <h1>SharePlex</h1>
+        <p>Transfiera datos de Oracle a Oracle con la solucion de replicacion completa.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="shareplex__summary">
+    <div class="shareplex__summary-card">
+      <h2>Logre alta disponibilidad de bases de datos Oracle para Oracle, de forma local y en la nube.</h2>
+      <p>�Valora sus bases de datos, pero le molestan las herramientas de replicacion que tiene?</p>
+      <p>
+        Quiza sienta que esta atascado con paquetes de administracion costosos que no incluyen toda la funcionalidad que necesita. �Que pasaria si pudiera lograr sus objetivos sin comprar
+        herramientas nativas? Liberaria recursos para invertirlos en formas nuevas de impulsar su empresa.
+      </p>
+      <p>
+        Con SharePlex, replique datos de Oracle a una fraccion del costo de herramientas nativas. Logre alta disponibilidad, aumente la escalabilidad e integre los datos que ya conoce y confia.
+        Transfiera sus datos, no su presupuesto, con replicacion economica.
+      </p>
+    </div>
+  </section>
+
+  <section class="shareplex__benefits">
+    <div class="shareplex__benefits-inner">
+      <div class="shareplex__video">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/-iyZq6pDFe8"
+          title="Presentacion SharePlex"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <header>
+        <h2>SharePlex proporciona</h2>
+      </header>
+      <div class="shareplex__benefits-grid">
+        <article class="shareplex-benefit">
+          <img
+            src="https://static.wixstatic.com/media/4ec771_7bd14b1a445444fcb502c750071c062c~mv2.png/v1/fill/w_88,h_128,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Alta%20Disponibilidad.png"
+            alt="Alta disponibilidad"
+          />
+          <h3>Alta disponibilidad</h3>
+          <p>Logre un 99.999 % de alta disponibilidad transfiriendo datos sin problemas en todo el entorno de base de datos Oracle.</p>
+        </article>
+        <article class="shareplex-benefit">
+          <img
+            src="https://static.wixstatic.com/media/4ec771_8c35ac1c6e1e4790bcef3ffbb2feb193~mv2.png/v1/crop/x_0,y_0,w_1002,h_1217/fill/w_104,h_124,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Migraciones%20y%20Actualizacionesxxxhdpi.png"
+            alt="Migraciones y actualizaciones"
+          />
+          <h3>Migraciones y actualizaciones</h3>
+          <p>
+            Realice migraciones y actualizaciones de bases de datos Oracle sin repercusiones, tiempo de inactividad ni perdida de datos.
+          </p>
+        </article>
+        <article class="shareplex-benefit">
+          <img
+            src="https://static.wixstatic.com/media/4ec771_64f903febc294554b5739a64c2462fdf~mv2.png/v1/fill/w_143,h_128,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Informes.png"
+            alt="Informes"
+          />
+          <h3>Informes</h3>
+          <p>
+            Delegue informes para soporte de analisis y macrodatos, mejorando el rendimiento de la base de datos Oracle con replicacion confiable.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="shareplex__stats">
+    <div class="shareplex__stats-image" role="img" aria-label="Metricas de disponibilidad, soporte y satisfaccion">
+      <img
+        src="https://static.wixstatic.com/media/4ec771_7cc810dc2f8346a598441fabe6ae4236~mv2.png/v1/crop/x_0,y_0,w_1828,h_260/fill/w_760,h_108,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Numeros.png"
+        alt="0 Tiempo de inactividad y perdida de datos cero. 24/7 Soporte galardonado. 95%+ Satisfaccion del cliente."
+      />
+    </div>
+    <div class="shareplex__replica-card">
+      <h2>Replica de bases de datos heterogenea para entornos locales, en la nube o hibridos.</h2>
+      <p>
+        Logre una gran disponibilidad, escalabilidad e integracion de datos a traves de replicas en tiempo real de bases de datos locales, en la nube o en entornos hibridos. Aproveche las bases de
+        datos emergentes, de codigo abierto o por streaming con cero impacto en las aplicaciones criticas de Oracle o bases de datos de SQL Server.
+      </p>
+      <p>
+        La replicacion de bases de datos de SharePlex impulsa a su empresa para alcanzar los objetivos de hoy en dia y del futuro. Aproveche las capacidades integradas de monitoreo, resolucion de
+        conflictos, comparacion de datos y sincronizacion, respaldadas por un soporte galardonado.
+      </p>
+    </div>
+  </section>
+
+  <section class="shareplex__benefits-list">
+    <div class="shareplex__benefits-list-inner">
+      <header>
+        <h2>Beneficios</h2>
+      </header>
+      <div class="shareplex__benefits-cards">
+        <article class="shareplex-benefit-card" *ngFor="let benefit of benefits">
+          <img [src]="benefit.image" [alt]="benefit.title" />
+          <h3>{{ benefit.title }}</h3>
+          <p>{{ benefit.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="shareplex__features">
+    <header class="shareplex__features-header">
+      <h2>CARACTERISTICAS</h2>
+    </header>
+    <div class="shareplex__features-inner">
+      <div class="shareplex__features-grid">
+        <article class="shareplex-feature">
+          <h3>Base de Datos Independiente de los Proveedores</h3>
+          <p>
+            Dado que no hay ningun bloqueo de proveedores, puede implementar facilmente una unica solucion tanto para las bases de datos de Oracle como de SQL Server. SharePlex replica los datos de
+            Oracle o SQL Server a mas de una docena de plataformas, incluidas Amazon Web Services (AWS), AuroraDB, el servicio de Azure SQL Database, EDB Postgres Advanced Server, Java Message Service
+            (JMS), MySQL, PostgreSQL, SAP ASE, SAP HANA, Oracle, Microsoft SQL Server, Tibero, Teradata, Kafka, y archivos planos, SQL y XML.
+          </p>
+        </article>
+
+        <article class="shareplex-feature">
+          <h3>Entornos Hibridos y Heterogeneos</h3>
+          <p>
+            Puede migrar a bases de datos basadas en la nube o de codigo abierto casi sin tiempo de inactividad, permitiendo que los procesos operativos diarios continuen sin interrupciones.
+          </p>
+        </article>
+
+        <article class="shareplex-feature">
+          <h3>Conjunto Completo de Funciones</h3>
+          <p>
+            Ofrece funciones integradas de monitoreo, resolucion de conflictos, comparacion de datos y sincronizacion para ayudar a las empresas a mantener las bases de datos que le dan soporte a los
+            demandantes entornos de las aplicaciones.
+          </p>
+        </article>
+
+        <article class="shareplex-feature">
+          <h3>Prevencion del Tiempo de Inactividad</h3>
+          <p>
+            Garantiza una disponibilidad del 99 % durante las actualizaciones y migraciones de la base de datos, lo que elimina las presiones y el riesgo, a la vez le otorga mas tiempo para centrarse
+            en otras prioridades.
+          </p>
+        </article>
+
+        <article class="shareplex-feature">
+          <h3>Integracion y Replicacion de Datos casi en tiempo real</h3>
+          <p>Replica bases de datos casi en tiempo real para la escalabilidad y alta disponibilidad, hacia y desde bases de datos locales y en la nube.</p>
+        </article>
+
+        <article class="shareplex-feature">
+          <h3>Soporte para el Analisis</h3>
+          <p>
+            Descarga datos casi en tiempo real para sistemas de inteligencia comercial y de analisis. Ademas permite el acceso a datos sin afectar el rendimiento de la aplicacion.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="shareplex__features-row">
+        <article class="shareplex-feature">
+          <h3>Facilidad de uso Comprobada</h3>
+          <p>
+            Esta listo y funcionando en 15 minutos. La solucion SharePlex simplifica las configuraciones complejas y optimiza el tiempo que se requiere para comenzar a replicar. La replicacion de bases
+            de datos de SharePlex ha ayudado a mas de 360 industrias a encontrar la tranquilidad.
+          </p>
+        </article>
+
+        <article class="shareplex-feature">
+          <h3>Soporte Galardonado las 24 Horas, los 7 dias de la Semana, los 365 dias del Ano</h3>
+          <p>
+            Reduce al minimo el riesgo empresarial. Este soporte proporciona un soporte inigualable de alta calidad que ha recibido muchos premios del sector.
+          </p>
+        </article>
+
+        <div class="shareplex__tco-card shareplex__tco-card--sidebar">
+          <h3>El Costo Total de Propiedad mas Bajo</h3>
+          <p>
+            Esta solucion permite evitar proveedores heredados que demandan costosas actualizaciones a versiones nuevas del software, ademas de costosos paquetes de complementos y administracion. Con la
+            solucion de replicacion de bases de datos de SharePlex, usted obtiene una solucion integral con todas las funciones a un 10 % del costo total de propiedad de algunos vendedores heredados que
+            ofrecen replicacion de bases de datos.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shareplex__resources">
+    <div class="shareplex__resources-inner">
+      <header>
+        <h2>RECURSOS</h2>
+      </header>
+      <div class="shareplex__resources-panel">
+        <div class="shareplex__resources-grid">
+          <a class="shareplex-resource" *ngFor="let resource of resources" [href]="resource.href" target="_blank" rel="noopener">
+            <div class="shareplex-resource__image">
+              <img [src]="resource.image" [alt]="resource.title" />
+            </div>
+            <h3>{{ resource.title }}</h3>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="shareplex__specs">
+    <div class="shareplex__specs-inner">
+      <div class="shareplex__specs-header">
+        <h2>ESPECIFICACIONES</h2>
+      </div>
+      <div class="shareplex__specs-body">
+        <div class="shareplex__specs-block">
+          <h3>Plataforma</h3>
+          <p>Windows y UNIX/Linux</p>
+        </div>
+
+        <div class="shareplex__specs-block">
+          <h3>Memoria</h3>
+          <ul>
+            <li>Todos los procesos de SharePlex son de 64 bits y pueden superar los 4 GB.</li>
+          </ul>
+        </div>
+
+        <div class="shareplex__specs-block">
+          <h3>Software adicional</h3>
+          <ul>
+            <li>(Oracle) SQL*Plus</li>
+            <li>(JMS target) ActiveMQ u OpenMQ</li>
+          </ul>
+        </div>
+
+        <div class="shareplex__specs-block">
+          <h3>Requisitos adicionales</h3>
+          <ul>
+            <li>
+              Configuracion recomendada de descriptores de archivo de sistema de limite estricto con un minimo de 1024 o mas, segun lo permita el sistema.
+            </li>
+          </ul>
+        </div>
+
+        <p class="shareplex__specs-note">
+          Nota: Consulte la lista de verificacion previa a la instalacion especifica de la plataforma en la Guia de instalacion y demostracion, para obtener mas informacion sobre los requisitos
+          adicionales del sistema o la base de datos.
+        </p>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-shared-contact></app-shared-contact>

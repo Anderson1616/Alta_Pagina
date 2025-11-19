@@ -1,0 +1,338 @@
+:host {
+  display: block;
+  background: var(--page-bg) !important;
+}
+
+.change-auditor-training__hero {
+  min-height: clamp(260px, 50vw, 420px);
+  background: url("https://static.wixstatic.com/media/2d294619f36e453da709912282e66ab3.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2d294619f36e453da709912282e66ab3.jpg")
+    center / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.change-auditor-training__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 62, 76, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  padding: 1rem;
+}
+
+.change-auditor-training__logo {
+  width: clamp(180px, 25vw, 260px);
+  height: auto;
+}
+
+.change-auditor-training__hero-text {
+  color: #ffffff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.change-auditor-training__hero-text h1,
+.change-auditor-training__hero-text h2 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.change-auditor-training__hero-text h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.change-auditor-training__hero-text h2 {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+}
+
+.change-auditor-training__body {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(3rem, 7vw, 4rem);
+  display: flex;
+  justify-content: center;
+}
+
+.change-auditor-training__card {
+  width: min(780px, 92vw);
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #1c1c1c;
+  align-items: center;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.change-auditor-training__body-header {
+  background: #0a697a;
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.change-auditor-training__card p {
+  margin: 0;
+  line-height: 1.65;
+}
+
+.change-auditor-training__cta {
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  padding: clamp(1.5rem, 5vw, 2.5rem) 1rem clamp(2rem, 6vw, 3rem);
+}
+
+.change-auditor-training__badge img {
+  width: clamp(120px, 20vw, 160px);
+  height: auto;
+  display: block;
+}
+
+.change-auditor-training__modalidad {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+  display: flex;
+  justify-content: center;
+}
+
+.change-auditor-training__modalidad-inner {
+  width: min(820px, 92vw);
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #1c1c1c;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  align-items: center;
+}
+
+.change-auditor-training__modalidad-inner h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #1c1c1c;
+}
+
+.change-auditor-training__modalidad-inner p {
+  margin: 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.change-auditor-training__modalidad-inner ul {
+  margin: 0;
+  padding-left: 0;
+  list-style-position: inside;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  text-align: center;
+}
+
+.change-auditor-training__actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.change-auditor-training__btn {
+  background: #0a697a;
+  color: #ffffff;
+  padding: 0.65rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.change-auditor-training__btn--icon {
+  width: 44px;
+  text-align: center;
+  padding: 0.65rem 0;
+}
+
+.change-auditor-training__image {
+  margin-top: 1rem;
+}
+
+.change-auditor-training__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.change-auditor-training__profesor {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.change-auditor-training__profesor-card {
+  width: min(780px, 92vw);
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 25px 45px rgba(7, 24, 42, 0.12);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  margin: 0 auto;
+}
+
+.change-auditor-training__profesor-header {
+  background: transparent;
+  color: #0a5060;
+  padding: 0;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.change-auditor-training__profesor-body {
+  width: min(760px, 90vw);
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 260px) minmax(0, 1fr);
+  gap: clamp(1rem, 3vw, 1.5rem);
+  align-items: center;
+  justify-items: start;
+  overflow-wrap: break-word;
+}
+
+.change-auditor-training__profesor-photo {
+  width: clamp(160px, 26vw, 300px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.change-auditor-training__profesor-photo img {
+  border-radius: 50%;
+  width: clamp(140px, 22vw, 220px);
+  height: auto;
+  display: block;
+}
+
+.change-auditor-training__profesor-text {
+  color: #1c1c1c;
+  line-height: 1.6;
+  text-align: left;
+  max-width: 460px;
+}
+
+.change-auditor-training__lodging {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(3rem, 7vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.change-auditor-training__lodging-card {
+  width: min(780px, 92vw);
+  box-sizing: border-box;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 22px 45px rgba(7, 24, 42, 0.12);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  overflow-wrap: break-word;
+  margin: 0 auto;
+}
+
+.change-auditor-training__lodging-body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.change-auditor-training__lodging-text {
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+
+.change-auditor-training__lodging-header {
+  background: transparent;
+  color: #0a5060;
+  padding: 0;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.change-auditor-training__lodging-body {
+  width: min(1100px, 96vw);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1rem, 3vw, 1.5rem);
+  align-items: center;
+}
+
+.change-auditor-training__lodging-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.change-auditor-training__lodging-text {
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+
+.change-auditor-training__lodging-text a {
+  color: #0a5060;
+  text-decoration: underline;
+}
+
+/* Desktop: fix main card widths to 1100px for consistent layout */
+@media (min-width: 1120px) {
+  .change-auditor-training__card,
+  .change-auditor-training__modalidad-inner,
+  .change-auditor-training__profesor-card,
+  .change-auditor-training__profesor-body,
+  .change-auditor-training__lodging-card,
+  .change-auditor-training__lodging-body {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

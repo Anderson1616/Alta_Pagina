@@ -1,0 +1,86 @@
+<section id="contacto" class="contact">
+  <div class="container">
+    <header class="contact__header">
+    <h2 id="contacto-final">¿Listo para llevar tu Tecnología al siguiente nivel?</h2>
+      <p>Obtén una evaluación gratuita de tu infraestructura y un roadmap de mejora.</p>
+    </header>
+    <div class="contact-wrap">
+      <form class="contact-form" onsubmit="return false" aria-label="Formulario de contacto">
+        <div class="form-grid">
+          <label>
+            Nombre
+            <input type="text" placeholder="Tu nombre" required />
+          </label>
+          <label>
+            Email
+            <input type="email" placeholder="tu@empresa.com" required />
+          </label>
+          <label>
+            Teléfono
+            <input type="tel" placeholder="+506 0000 0000" />
+          </label>
+          <label>
+            Empresa
+            <input type="text" placeholder="Nombre de empresa" />
+          </label>
+          <label class="span-2">
+            Mensaje
+            <textarea rows="4" placeholder="Cuéntanos brevemente tu necesidad"></textarea>
+          </label>
+        </div>
+        <button class="btn-primary" type="submit">Solicitar consultoría</button>
+        <p class="form-hint">Respuesta en &lt; 2 horas en horario laboral.</p>
+      </form>
+      <aside class="contact-pane" aria-label="Oficinas y mapa">
+        <h3 class="contact-pane__title">Contactos</h3>
+        <div class="office-tabs" role="tablist" aria-label="Seleccionar país">
+          <button
+            *ngFor="let office of offices"
+            class="office-tab"
+            type="button"
+            role="tab"
+            [attr.aria-selected]="office.id === activeOfficeId"
+            [class.is-active]="office.id === activeOfficeId"
+            (click)="setActiveOffice(office.id)"
+          >
+            {{ office.label }}
+          </button>
+        </div>
+        <div class="office-panels">
+          <section
+            *ngFor="let office of offices"
+            class="office-panel"
+            role="tabpanel"
+            [hidden]="office.id !== activeOfficeId"
+            [attr.aria-labelledby]="'tab-' + office.id"
+          >
+            <div class="map-embed">
+              <iframe
+                [src]="office.mapEmbed"
+                loading="lazy"
+                allowfullscreen
+                title="Mapa {{ office.label }}"
+              ></iframe>
+            </div>
+            <ul class="office-info">
+              <li>Teléfono: <a [href]="'tel:' + office.phoneHref">{{ office.phoneDisplay }}</a></li>
+              <li>Email: <a [href]="'mailto:' + contactEmail">{{ contactEmail }}</a></li>
+              <li>Ciudad: {{ office.city }}</li>
+              <li *ngFor="let line of office.addressLines">{{ line }}</li>
+            </ul>
+            <div class="office-cta">
+              <a class="btn-outline" [href]="'tel:' + office.phoneHref">Llamar</a>
+              <a class="btn-outline" [href]="'mailto:' + contactEmail">Escribir</a>
+            </div>
+          </section>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 Alta Tecnología — Todos los derechos reservados.</p>
+  </div>
+</footer>

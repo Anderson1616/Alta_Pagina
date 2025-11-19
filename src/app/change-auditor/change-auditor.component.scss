@@ -1,0 +1,293 @@
+:host {
+  display: block;
+  background: var(--page-bg) !important;
+}
+
+.change-auditor__hero {
+  min-height: clamp(240px, 45vw, 420px);
+  background: url("https://static.wixstatic.com/media/4ec771_d2168bda44874d7392808d8048e9b2f1~mv2_d_3888_2592_s_4_2.jpeg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_d2168bda44874d7392808d8048e9b2f1~mv2_d_3888_2592_s_4_2.jpeg")
+    center / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.change-auditor__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 62, 76, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.change-auditor__hero h1 {
+  position: relative;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  text-align: center;
+}
+
+.change-auditor__summary {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(3rem, 7vw, 4rem);
+  display: flex;
+  justify-content: center;
+}
+
+.change-auditor__content {
+  /* make card responsive: full bleed on small screens, fixed 1100px on desktop via media query below */
+  width: 96vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #1c1c1c;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  box-shadow: 0 18px 40px rgba(7, 24, 42, 0.08);
+  align-items: stretch;
+  /* prevent long words/URLs from overflowing the card */
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.change-auditor__content h2 {
+  margin: 0;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+}
+
+.change-auditor__content p {
+  margin: 0;
+  line-height: 1.7;
+  white-space: normal;
+  hyphens: auto;
+}
+
+.change-auditor__cta-row {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.change-auditor__cta {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--btn-primary-start), var(--btn-primary-end)) !important;
+  color: #ffffff;
+  padding: 0.85rem 2.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.change-auditor__cta:hover,
+.change-auditor__cta:focus {
+  background: #ffffff !important;
+  color: var(--btn-primary-end) !important;
+}
+
+.change-auditor__features {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+}
+
+.change-auditor__features-inner {
+  width: 96vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: 0 25px 45px rgba(7, 24, 42, 0.08);
+}
+
+.change-auditor__features-header {
+  background: transparent !important;
+  color: #0a5060;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.change-auditor__features-header h2 {
+  margin: 0;
+}
+
+.change-auditor__features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 2vw, 1.25rem);
+}
+
+.change-auditor-feature {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.change-auditor-feature h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0a5060;
+}
+
+.change-auditor-feature p {
+  margin: 0;
+  line-height: 1.6;
+  color: #1c1c1c;
+}
+
+.change-auditor__specs {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+}
+
+.change-auditor__specs-inner {
+  width: 96vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: 0 25px 45px rgba(7, 24, 42, 0.08);
+}
+
+.change-auditor__specs-header {
+  background: transparent !important;
+  color: #0a5060;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.change-auditor__specs-header h2 {
+  margin: 0;
+}
+
+.change-auditor__specs-body {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: 0 18px 40px rgba(7, 24, 42, 0.06);
+}
+
+.change-auditor__specs-body ul {
+  margin: 0;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: #0a3060;
+  font-weight: 600;
+}
+
+.change-auditor__specs-body ul ul {
+  margin-top: 0.25rem;
+  padding-left: 1.2rem;
+  gap: 0.35rem;
+  font-weight: 400;
+  color: #1c1c1c;
+}
+
+.change-auditor__resources {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+}
+
+.change-auditor__resources-inner {
+  width: 96vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  box-shadow: 0 25px 45px rgba(7, 24, 42, 0.08);
+}
+
+.change-auditor__resources header h2 {
+  margin: 0 0 1rem 0;
+  background: transparent !important;
+  color: #0a5060;
+  padding: 0;
+  border-radius: 0;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.change-auditor__resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+}
+
+.change-auditor-resource {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  padding: 0.75rem 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #1c1c1c;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.change-auditor-resource:hover,
+.change-auditor-resource:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+.change-auditor-resource__image {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.change-auditor-resource__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.change-auditor-resource h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #0a5060;
+  text-align: center;
+}
+
+/* Desktop: fix main card widths to 1100px for consistent layout */
+@media (min-width: 1200px) {
+  .change-auditor__content,
+  .change-auditor__features-inner,
+  .change-auditor__specs-inner,
+  .change-auditor__resources-inner {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+

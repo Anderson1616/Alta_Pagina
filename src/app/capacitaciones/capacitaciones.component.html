@@ -1,0 +1,70 @@
+﻿<app-shared-header></app-shared-header>
+
+<main class="capacitaciones">
+  <section class="capacitaciones-hero">
+    <div class="capacitaciones-hero__overlay">
+      <h1>Capacitaciones</h1>
+      <p>Programas de formación para equipos técnicos y de negocio, impartidos por expertos.</p>
+    </div>
+  </section>
+
+  <section class="capacitaciones-list">
+    <div class="container">
+      <header>
+        <h2>Nuestras capacitaciones</h2>
+      </header>
+      <div class="program-grid" *ngIf="filteredPrograms.length; else emptyPrograms">
+        <article class="program-card" *ngFor="let program of filteredPrograms">
+          <button
+            type="button"
+            class="program-card__cart"
+            aria-label="Agregar {{ program.title }} al carrito"
+            (click)="addProgramToCart(program)"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 5h2.2l1.6 8.5H17l1.2-6H8.7"></path>
+              <circle cx="9.5" cy="18.5" r="1.5"></circle>
+              <circle cx="16.5" cy="18.5" r="1.5"></circle>
+            </svg>
+          </button>
+          <div class="program-card__icon" *ngIf="program.icon; else programInitial">
+            <img [src]="program.icon" [alt]="program.title" />
+          </div>
+          <ng-template #programInitial>
+            <div class="program-card__icon program-card__icon--placeholder">{{ program.title.charAt(0) }}</div>
+          </ng-template>
+          <div class="program-card__body">
+            <h3>{{ program.title }}</h3>
+            <p>{{ program.description }}</p>
+            <div class="program-card__tags">
+              <span *ngFor="let tag of program.tags">{{ tag }}</span>
+            </div>
+          </div>
+          <a
+            *ngIf="program.routerLink; else externalProgram"
+            class="program-card__cta"
+            [routerLink]="program.routerLink"
+          >
+            Ver programa
+          </a>
+          <ng-template #externalProgram>
+            <a class="program-card__cta" [href]="program.link || '#'">Ver programa</a>
+          </ng-template>
+        </article>
+      </div>
+      <ng-template #emptyPrograms>
+        <div class="empty-programs">
+          <h3>Estamos actualizando nuestro catálogo de capacitaciones.</h3>
+          <p>Muy pronto publicaremos nuevas opciones. Contáctanos si deseas recibir las próximas fechas.</p>
+        </div>
+      </ng-template>
+    </div>
+  </section>
+
+  </main>
+<app-shared-contact></app-shared-contact>
+
+
+
+
+

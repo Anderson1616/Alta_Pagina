@@ -1,0 +1,385 @@
+:host {
+  display: block;
+  /* Uniform page background for the vRanger view */
+  background: linear-gradient(180deg, #f2f8fb 0%, #e8f2f6 100%) !important;
+}
+
+.vranger {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding-bottom: clamp(3rem, 10vw, 6rem);
+}
+
+.vranger__hero {
+  min-height: clamp(280px, 45vw, 420px);
+  background: url("https://static.wixstatic.com/media/e546e4fda51547a287b459c10d25937b.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e546e4fda51547a287b459c10d25937b.jpg")
+    center / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vranger__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 68, 82, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vranger__hero-overlay h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  letter-spacing: 0.2em;
+  color: #ffffff;
+}
+
+.vranger__assurance {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.vranger__assurance-hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+  gap: 2rem;
+  max-width: min(1100px, 96vw);
+  margin: 0 auto;
+}
+
+/* Brief text shown inside a white card on the left column (replaces the icon) */
+.vranger__assurance-brief {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  box-shadow: 0 16px 36px rgba(7, 24, 42, 0.08);
+  border: 1px solid rgba(11, 37, 55, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.vranger__assurance-brief p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #1c1c1c;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.vranger__assurance-content {
+  background: #ffffff;
+  border-radius: 24px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 25px 50px rgba(7, 24, 42, 0.12);
+  max-width: min(1100px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #1b1b1b;
+}
+
+.vranger__assurance-content ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  line-height: 1.7;
+}
+
+.vranger__features {
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+  display: flex;
+  justify-content: center;
+  background: transparent;
+}
+
+.vranger__features-card {
+  width: min(1100px, 96vw);
+  border-radius: 24px;
+  box-shadow: 0 25px 50px rgba(7, 24, 42, 0.12);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #0f0f0f;
+  background: #ffffff;
+}
+
+.vranger__features-card h2 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 1.4rem;
+  color: #0a5060;
+}
+
+.vranger__features-card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0a5060;
+}
+
+.vranger__features-card p {
+  margin: 0;
+  line-height: 1.8;
+}
+
+.vranger__resources {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+}
+
+.vranger__resources-inner {
+  width: min(1100px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vranger__resources-inner header h2 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 1.4rem;
+  color: #0a5060;
+  align-self: center;
+  text-align: center;
+}
+
+.vranger__resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.vranger-resource {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 25px 50px rgba(7, 24, 42, 0.12);
+  border: 1px solid rgba(11, 37, 55, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vranger-resource img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.vranger-resource strong {
+  font-size: 0.95rem;
+  color: #0a5060;
+}
+
+.vranger-resource span {
+  font-size: 0.9rem;
+  color: #2c4055;
+}
+
+.vranger-resource:hover,
+.vranger-resource:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 35px 65px rgba(7, 24, 42, 0.18);
+}
+
+.vranger__screenshots {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+}
+
+.vranger__screenshots-inner {
+  width: min(1100px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.vranger__screenshots-inner header h2 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 1.4rem;
+  color: #0a5060;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  align-self: center;
+  text-align: center;
+}
+
+.vranger__screenshots-carousel {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vranger__screenshots-window {
+  overflow: hidden;
+  width: 100%;
+}
+
+.vranger__screenshots-nav {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: linear-gradient(180deg,#2ab5cc,#0f6a7d);
+  border: none;
+  box-shadow: 0 8px 20px rgba(15,106,125,0.18);
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.1rem;
+  z-index: 5;
+  transition: background-color 220ms ease, color 220ms ease, box-shadow 200ms ease, transform 160ms ease;
+}
+
+.vranger__screenshots-nav svg {
+  width: 18px;
+  height: 18px;
+}
+
+.vranger__screenshots-nav polyline {
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.vranger__screenshots-nav:focus,
+.vranger__screenshots-nav:active {
+  outline: none;
+  background: #ffffff !important; /* on hover/active: white circle */
+  color: #0f6a7d !important; /* arrow becomes teal */
+  box-shadow: 0 8px 20px rgba(15,106,125,0.12);
+}
+
+.vranger__screenshots-nav:disabled {
+  opacity: 0.45;
+  cursor: default;
+  box-shadow: none;
+}
+
+.vranger__screenshots-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.vranger__screenshots-slide {
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+}
+
+.vranger__screenshots-slide img {
+  width: min(900px, 96vw);
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 18px 40px rgba(7, 24, 42, 0.12);
+  background: #ffffff;
+}
+
+.vranger__screenshots-dots {
+  margin-top: 0.6rem; /* move dots a bit closer to the image */
+  display: flex;
+  gap: 0.9rem; /* increased spacing between dots */
+  justify-content: center;
+}
+
+/* Small flat dots: inactive = teal, active = white with teal border */
+.vranger__screenshots-dots button {
+  /* enforce a slightly larger, perfectly circular dot regardless of global button styles */
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  min-height: 12px;
+  padding: 0;
+  line-height: 0;
+  vertical-align: middle;
+  border-radius: 999px; /* full round */
+  background: rgba(10, 156, 184, 0.95);
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background 140ms ease, box-shadow 140ms ease, border-color 140ms ease, transform 140ms ease;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.vranger__screenshots-dots button:hover,
+.vranger__screenshots-dots button:focus-visible {
+  box-shadow: 0 0 0 2px rgba(10, 156, 184, 0.35);
+}
+
+.vranger__screenshots-dots button.active,
+.vranger__screenshots-dots button.active:focus-visible,
+.vranger__screenshots-dots button.active:focus {
+  /* force active/selected appearance even if other focus styles apply */
+  background: #ffffff !important;
+  border: 1px solid #0a9cb8 !important;
+  box-shadow: 0 0 0 2px rgba(10, 156, 184, 0.12) !important;
+  transform: scale(1.08);
+}
+
+.vranger__demo {
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+  background: transparent;
+}
+
+.vranger__demo-inner {
+  width: min(1100px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.vranger__demo-inner header h2 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 1.4rem;
+  color: #0a5060;
+  /* Removed background/padding to leave only the title text */
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+.vranger__demo-video {
+  width: min(900px, 96vw);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 55px rgba(7, 24, 42, 0.15);
+}
+
+.vranger__demo-video iframe {
+  width: 100%;
+  height: clamp(220px, 45vw, 420px);
+  border: 0;
+  display: block;
+}
+

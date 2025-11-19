@@ -1,0 +1,241 @@
+<app-shared-header></app-shared-header>
+
+<main class="sonicwall" aria-label="SonicWall">
+  <section class="sonicwall__hero">
+    <div class="sonicwall__hero-overlay">
+      <img
+        src="https://static.wixstatic.com/media/4ec771_ceeba145309045b0817fd17394c73b8a~mv2.png/v1/fill/w_580,h_96,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_ceeba145309045b0817fd17394c73b8a~mv2.png"
+        alt="SonicWall"
+      />
+    </div>
+  </section>
+
+  <section class="sonicwall__assurance">
+    <div class="sonicwall__assurance-card">
+      <div class="sonicwall__assurance-hero">
+        <p>
+          Simplifique la seguridad de su empresa con la próxima generación de Firewalls, Antivirus, AntiMalware, Control de accesos Byod, Control de Contenido, Protección de Datos etc...
+          <br />
+          <br />
+          Todo de manera integrada en una sola solución ¡Sin perder tiempo!
+        </p>
+      </div>
+      <div class="sonicwall__assurance-content">
+        <p>
+          Asegure los sistemas, usuarios y datos de su empresa con un nivel de protección simple de administrar, completo e integral sin sacrificar a su personal ni el desempeño de su red de comunicaciones.
+        </p>
+        <p>
+          Las soluciones patentadas convencionales o inalámbricas de SonicWALL diseñadas para la nueva era digital, cuentan con la mejor relación precio/desempeño disponible y mayor cobertura de seguridad disponible para PYMEs, oficinas regionales, oficinas centrales empresariales, gobierno, salud, y proveedores de servicios de telecomunicaciones y call centers.
+        </p>
+        <div class="sonicwall__cta-row">
+          <button type="button" class="sonicwall__cta" (click)="scrollToContact()">
+            Prueba de Concepto
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sonicwall__features">
+    <div class="sonicwall__features-card">
+      <h2>Características</h2>
+      <h3>Seguridad SonicWALL</h3>
+      <p>
+        Asegure el perímetro de su red de comunicaciones con la mejor solución en su clase de seguridad integrada de próxima generación para alinearse a la nueva era digital y así usted podrá invertir su tiempo en hacer crecer su negocio y evitar labores cotidianas de poco valor.
+      </p>
+      <p>
+        Asegure sus aplicaciones, usuarios y datos con protección total sin comprometer el desempeño de su red. Las soluciones de Sonicwall convencionales o inalámbricas han sido instaladas en 200 países en más de 250,000 clientes, en negocios pequeños, medianos y grandes ambientes corporativos, empresariales, de gobierno, salud, detallistas y empresas proveedoras de servicios públicos.
+        Seguridad de contra virus, span, spyware, malware y ataques sin paralelo
+      </p>
+      <p>
+        Con tecnología patentada, y la capacidad en su hardware necesaria, Sonicwall examina el 100% de los paquetes de información normal o encriptada en cualquier protocolo que trasiegan su red identificando todos los riesgos de la forma más eficiente en el mercado hoy en día sin degradación en su red de comunicaciones. Nuestro centro de identificación de riesgos y trabajo en conjunto con Microsoft MAPP y otros líderes en seguridad, permite actualización de vulnerabilidades constante y detectar hasta 4.7 billones de ataques diarios en el mundo.
+      </p>
+      <p>
+        Puesto que examinamos cada paquete nos es fácil al mismo tiempo filtrar contenido, limitar las URL que ven sus usuarios, controlar la calidad de servicio, facilitar conexiones seguras https, SSL y VPNs y limitar el acceso a las aplicaciones. Usted puede ver todo estos en una simple interfaz gráfica y lograr implementar políticas para toda su empresa con unos pocos clics.
+      </p>
+      <p>Todos nuestros productos utilizan la misma tecnología y mecanismo de administración.</p>
+
+      <h3>Acceso Móvil Seguro</h3>
+      <p>
+        Asegure el acceso a los recursos esenciales desde prácticamente cualquier extremo con soluciones seguras de acceso móvil escalables. Los dispositivos de acceso remoto seguro y las aplicaciones SonicWALL Mobile Connect ofrecen conexiones SSL VPN a equipos de escritorio, equipos portátiles, tabletas y teléfonos inteligentes, desde las empresas más pequeñas hasta las más grandes multinacionales.
+      </p>
+
+      <h3>Seguridad de Correo Electrónico</h3>
+      <p>
+        Libere el poder de la tecnología contra correo no deseado de SonicWALL para bloquear amenazas de correo electrónico de manera eficaz y económica. Ya sea una pequeña o mediana empresa, una empresa distribuida o un proveedor de servicios administrado, SonicWALL tiene una solución flexible para defender a su organización de correo no deseado, virus, suplantación de identidad y fugas de datos.
+      </p>
+
+      <h3>Administración y Generación de Informes</h3>
+      <p>
+        Obtenga una arquitectura integral para crear y administrar de manera central las políticas de seguridad, monitorear en tiempo real, analizar el tráfico y crear informes intuitivos. SonicWALL ofrece una variedad de soluciones que le permiten monitorear, analizar y resolver problemas del tráfico de red para satisfacer las exigencias únicas de su negocio.
+      </p>
+    </div>
+  </section>
+
+  <section class="sonicwall__screens">
+    <div class="sonicwall__screens-inner">
+      <header>
+        <h2>Screenshots</h2>
+      </header>
+      <div class="sonicwall__screens-main">
+        <img [src]="screenshots[currentScreenshot]" alt="SonicWall screenshot" />
+      </div>
+      <div class="sonicwall__screens-thumbs">
+        <button
+          type="button"
+          *ngFor="let shot of screenshots; let i = index"
+          [class.active]="i === currentScreenshot"
+          (click)="selectScreenshot(i)"
+        >
+          <img [src]="shot" [alt]="'SonicWall screenshot ' + (i + 1)" />
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="sonicwall__products">
+    <div class="sonicwall__products-inner">
+      <header>
+        <h2>Líneas de Productos</h2>
+      </header>
+      <div class="sonicwall__products-list">
+        <article class="sonicwall-product">
+          <div class="sonicwall-product__text">
+            <h3>SonicWALL SuperMassive E10000 Series</h3>
+            <p>
+              Proporcione escalabilidad, confiabilidad y seguridad total para redes de más de 10 Gigabits de centros de datos, operadores y proveedores de servicios. Mejores conexiones simultáneas y relación Gbps/vato para control de aplicaciones y prevención de amenazas.
+            </p>
+            <strong>Modelos:</strong>
+            <ul>
+              <li>SonicWALL SuperMassive E10800</li>
+              <li>SonicWALL SuperMassive E10400</li>
+            </ul>
+          </div>
+          <div class="sonicwall-product__media">
+            <img
+              src="https://static.wixstatic.com/media/4ec771_f32a8f9e551147468f52f483682c0d22~mv2.jpg/v1/fill/w_146,h_76,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_f32a8f9e551147468f52f483682c0d22~mv2.jpg"
+              alt="SonicWALL SuperMassive E10000 Series"
+            />
+          </div>
+        </article>
+
+        <article class="sonicwall-product">
+          <div class="sonicwall-product__text">
+            <h3>SonicWALL SuperMassive 9000 Series</h3>
+            <p>
+              Garantice protección y escalabilidad para infraestructuras de más de 10 Gigabits en un bastidor único de alta densidad que reduce costos de energía y refrigeración.
+            </p>
+            <strong>Modelos:</strong>
+            <ul>
+              <li>SonicWALL SuperMassive 9800</li>
+              <li>SonicWALL SuperMassive 9600</li>
+              <li>SonicWALL SuperMassive 9400</li>
+              <li>SonicWALL SuperMassive 9200</li>
+            </ul>
+          </div>
+          <div class="sonicwall-product__media">
+            <img
+              src="https://static.wixstatic.com/media/4ec771_1a3bbf2514ed4a488757770eeda9b005~mv2.jpg/v1/fill/w_145,h_71,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_1a3bbf2514ed4a488757770eeda9b005~mv2.jpg"
+              alt="SonicWALL SuperMassive 9000 Series"
+            />
+          </div>
+        </article>
+
+        <article class="sonicwall-product">
+          <div class="sonicwall-product__text">
+            <h3>SonicWALL NSA Series</h3>
+            <p>
+              Seguridad de clase empresarial con alta confiabilidad y rendimiento para sucursales, campus y empresas distribuidas, minimizando costos de implementación con un único dispositivo que integra varias tecnologías.
+            </p>
+            <strong>Modelos:</strong>
+            <ul>
+              <li>SonicWALL NSA 6600</li>
+              <li>SonicWALL NSA 5600</li>
+              <li>SonicWALL NSA 4600</li>
+              <li>SonicWALL NSA 3600</li>
+              <li>SonicWALL NSA 2600</li>
+              <li>SonicWALL NSA 250M</li>
+              <li>SonicWALL NSA 220</li>
+            </ul>
+          </div>
+          <div class="sonicwall-product__media">
+            <img
+              src="https://static.wixstatic.com/media/4ec771_fd0b66bf181f4193a2a28ef34c9dad9a~mv2.jpg/v1/fill/w_145,h_75,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_fd0b66bf181f4193a2a28ef34c9dad9a~mv2.jpg"
+              alt="SonicWALL NSA Series"
+            />
+          </div>
+        </article>
+
+        <article class="sonicwall-product">
+          <div class="sonicwall-product__text">
+            <h3>SonicWALL TZ Series</h3>
+            <p>
+              Firewall UTM de alto rendimiento para pequeñas empresas, minoristas y sitios remotos, con prevención de intrusiones, control de aplicaciones, filtrado de contenido/URL y protección antimalware.
+            </p>
+            <strong>Modelos:</strong>
+            <ul>
+              <li>TZ600</li>
+              <li>TZ500</li>
+              <li>TZ400</li>
+              <li>TZ300</li>
+              <li>TZ225</li>
+              <li>SOHO</li>
+            </ul>
+          </div>
+          <div class="sonicwall-product__media">
+            <img
+              src="https://static.wixstatic.com/media/4ec771_f7d22e7592c04e46be5f76b4a1e2bb94~mv2.jpg/v1/fill/w_116,h_131,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_f7d22e7592c04e46be5f76b4a1e2bb94~mv2.jpg"
+              alt="SonicWALL TZ Series"
+            />
+          </div>
+        </article>
+
+        <article class="sonicwall-product">
+          <div class="sonicwall-product__text">
+            <h3>SonicWALL WXA Series</h3>
+            <p>
+              Optimice la WAN reduciendo latencia y conservando ancho de banda para organizaciones con sucursales y oficinas remotas.
+            </p>
+            <strong>Modelos:</strong>
+            <ul>
+              <li>SonicWALL WXA 6000</li>
+              <li>SonicWALL WXA 4000</li>
+              <li>SonicWALL WXA 2000</li>
+              <li>SonicWALL WXA 5000 Virtual Appliance</li>
+              <li>Software SonicWALL WXA 500</li>
+            </ul>
+          </div>
+          <div class="sonicwall-product__media">
+            <img
+              src="https://static.wixstatic.com/media/4ec771_73dd35db8e6b4e298316079949af92c3~mv2.jpg/v1/fill/w_135,h_36,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_73dd35db8e6b4e298316079949af92c3~mv2.jpg"
+              alt="SonicWALL WXA Series"
+            />
+          </div>
+        </article>
+
+        <article class="sonicwall-product">
+          <div class="sonicwall-product__text">
+            <h3>SonicPoint Series</h3>
+            <p>
+              Tecnología inalámbrica 802.11ac de alto rendimiento con protección de firewall avanzada para simplificar la configuración y administración de la red.
+            </p>
+            <strong>Modelos:</strong>
+            <ul>
+              <li>SonicPoint ACe</li>
+              <li>SonicPoint ACi</li>
+              <li>SonicPoint N2</li>
+            </ul>
+          </div>
+          <div class="sonicwall-product__media">
+            <img
+              src="https://static.wixstatic.com/media/3f11fa_ba7848a215824dbaaca02e8cc0519d3f~mv2.jpg/v1/fill/w_135,h_68,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/3f11fa_ba7848a215824dbaaca02e8cc0519d3f~mv2.jpg"
+              alt="SonicPoint Series"
+            />
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-shared-contact></app-shared-contact>

@@ -1,0 +1,62 @@
+﻿<app-shared-header></app-shared-header>
+
+<main>
+  <section class="products-hero">
+    <div class="products-hero__overlay">
+      <div class="products-hero__content">
+        <h1>Productos</h1>
+        <p>Soluciones líderes que distribuimos e implementamos: observabilidad, seguridad/identidad, bases de datos, gestión de TI y backup/DR.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="products-grid">
+    <div class="container" *ngIf="filteredProducts.length; else emptyState">
+      <div class="products-grid__list" role="list">
+        <article class="product-card" role="listitem" *ngFor="let producto of filteredProducts">
+          <header class="product-card__header">
+            <img
+              [src]="producto.logo"
+              [alt]="producto.name"
+              loading="lazy"
+              [ngClass]="{ 'is-large': producto.name === 'Foglight Evolve' || producto.name === 'vRanger' }"
+            />
+          </header>
+          <h3>{{ producto.name }}</h3>
+          <p>{{ producto.description }}</p>
+          <div class="product-card__actions">
+            <a *ngIf="producto.routerLink" class="btn-primary" [routerLink]="producto.routerLink">
+              Más información
+            </a>
+            <a
+              *ngIf="!producto.routerLink && producto.link"
+              class="btn-primary"
+              [href]="producto.link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Más información
+            </a>
+            <button *ngIf="!producto.routerLink && !producto.link" class="btn-primary" type="button">
+              Más información
+            </button>
+          </div>
+        </article>
+      </div>
+    </div>
+    <ng-template #emptyState>
+      <div class="container empty-state">
+        <h3>No encontramos productos con ese término.</h3>
+        <p>Intenta con otra palabra clave como "seguridad", "backup" o "observabilidad".</p>
+        <button type="button" class="btn-primary" (click)="clearSearch()">Limpiar búsqueda</button>
+      </div>
+    </ng-template>
+  </section>
+
+  </main>
+<app-shared-contact></app-shared-contact>
+
+
+
+
+

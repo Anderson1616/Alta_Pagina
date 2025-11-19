@@ -1,0 +1,199 @@
+:host {
+  display: block;
+  background: var(--page-bg) !important;
+  color: #0d273a;
+  min-height: 100vh;
+}
+
+.main-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(15, 106, 125, 0.12);
+  box-shadow: 0 8px 32px rgba(10, 86, 110, 0.08);
+}
+
+.main-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 82px;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: #0f6a7d;
+}
+
+.brand-logo {
+  height: 47px;
+  width: auto;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+  color: #0f6a7d;
+}
+
+.main-nav a {
+  position: relative;
+  padding-bottom: 0.35rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.main-nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2ab5cc, #0f6a7d);
+  opacity: 0;
+  transform: scaleX(0.6);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.main-nav a:hover::after,
+.main-nav a:focus::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.header-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.icon-button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #d0dfea;
+  background: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d8197;
+}
+
+.nuestras-marcas {
+  display: flex;
+  flex-direction: column;
+}
+
+.brands {
+  padding: clamp(2.5rem, 8vw, 5rem) 0 clamp(3rem, 10vw, 6rem);
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+@media (min-width: 768px) {
+  .brands-grid {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+
+.brand-card {
+  background: #ffffff;
+  padding: clamp(1.75rem, 5vw, 2.5rem);
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(9, 24, 42, 0.12);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: #134055;
+  line-height: 1.55;
+  min-height: 320px;
+}
+
+.brand-logo {
+  width: auto;
+  height: auto;
+  max-height: 182px;
+  margin: 0 auto 0.75rem;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.brand-logo:hover,
+.brand-logo:focus {
+  transform: scale(1.02);
+}
+
+.brand-card p {
+  margin: 0;
+}
+
+.hero {
+  position: relative;
+  min-height: clamp(280px, 46vw, 420px);
+  overflow: hidden;
+}
+
+.hero__backdrop {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(180deg, rgba(6, 24, 36, 0.76), rgba(6, 24, 36, 0.6)),
+    url('https://static.wixstatic.com/media/4ec771_ff252a16a96b4ffcbf56f48b42a11014~mv2_d_7360_4912_s_4_2.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_ff252a16a96b4ffcbf56f48b42a11014~mv2_d_7360_4912_s_4_2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.hero__overlay {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #f8fbff;
+  padding: clamp(2rem, 6vw, 3rem);
+}
+
+.hero__overlay h1 {
+  margin: 0 auto;
+  font-size: clamp(2.5rem, 5vw, 3.4rem);
+  letter-spacing: 0.08em;
+  max-width: 100%;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 4vw, 3rem);
+}
+
+@media (max-width: 960px) {
+  .main-header .container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+

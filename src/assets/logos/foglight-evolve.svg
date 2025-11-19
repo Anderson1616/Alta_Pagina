@@ -1,0 +1,8 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 64'>
+  <g transform='translate(12,12)'>
+    <circle cx='20' cy='20' r='20' fill='#f5f8fb' stroke='#f58220' stroke-width='4'/>
+    <polyline points='10,22 18,30 32,10' fill='none' stroke='#1c86c8' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/>
+  </g>
+  <text x='74' y='34' font-family="'Montserrat', Arial, sans-serif" font-size='22' font-weight='600' fill='#333f4f'>Foglight</text>
+  <text x='74' y='54' font-family="'Montserrat', Arial, sans-serif" font-size='18' font-weight='500' fill='#f58220'>Evolve</text>
+</svg>

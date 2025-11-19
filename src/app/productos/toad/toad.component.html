@@ -1,0 +1,122 @@
+﻿<app-shared-header></app-shared-header>
+
+<main class="toad">
+  <section class="toad-hero">
+    <div class="toad-hero__overlay">
+      <h1>TOAD</h1>
+        <div class="toad-hero__logo">
+          <img src="https://static.wixstatic.com/media/4ec771_baebde70dd3b421684891ffe1c6078a9~mv2.png/v1/fill/w_410,h_348,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_baebde70dd3b421684891ffe1c6078a9~mv2.png" alt="Logo Toad" />
+        </div>
+      <p>
+        Conecta equipos de DBA, desarrollo y analistas con herramientas especializadas que aceleran la entrega de valor sin comprometer la estabilidad de tus bases de datos.
+      </p>
+      <div class="toad-tabs" role="tablist" aria-label="Suites de Toad">
+        <button type="button" class="toad-tab" *ngFor="let tab of tabs">{{ tab.label }}</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="toad-highlights">
+    <div class="container">
+      <div class="toad-highlights__wrap">
+        <div class="toad-highlights__content">
+          <h2>Logra con TOAD:</h2>
+          <ul>
+            <li *ngFor="let item of highlights">{{ item }}</li>
+          </ul>
+        </div>
+        <div class="toad-highlights__visual" aria-hidden="true">
+          <img src="https://static.wixstatic.com/media/4ec771_caff07833c424b87a95ee773c7d364b4~mv2.png/v1/fill/w_460,h_460,al_c,lg_1,q_85,enc_avif,quality_auto/4ec771_caff07833c424b87a95ee773c7d364b4~mv2.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="toad-profiles">
+    <div class="container">
+      <header>
+        <h2>Perfil</h2>
+        <p>Alta Tecnología distribuye, integra y brinda servicios y productos con los cuales cuenta, ofrece las siguientes opciones:</p>
+      </header>
+      <div class="profiles-grid">
+        <article class="profile-card" *ngFor="let item of capabilities">
+          <img [src]="item.icon" [alt]="item.title" />
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.description }}</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="toad-solutions">
+    <div class="container">
+      <h2>TOAD resuelve</h2>
+      <div class="solutions-grid">
+        <article class="solution-card" *ngFor="let solution of solutions">
+          <img [src]="solution.icon" [alt]="solution.title" />
+          <h3>{{ solution.title }}</h3>
+          <ul>
+            <li *ngFor="let item of solution.description">{{ item }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="toad-features">
+    <div class="container">
+      <div class="features-card">
+        <div class="features-content">
+          <div class="features-text">
+            <h2>Caracterñsticas</h2>
+            <p *ngFor="let paragraph of features.intro">{{ paragraph }}</p>
+            <ul>
+              <li *ngFor="let bullet of features.bullets">{{ bullet }}</li>
+            </ul>
+            <p class="features-closing">{{ features.closing }}</p>
+          </div>
+          <div class="features-visual">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlqNbhwk_flbL1plsOFpAaHZFddSIEc_xY9Q&s"
+              alt="Suites TOAD"
+            />
+            <div class="features-actions">
+              <a
+                class="feature-button"
+                *ngFor="let cta of features.ctas"
+                [href]="cta.link"
+                [attr.target]="cta.link.startsWith('http') ? '_blank' : null"
+                rel="noopener noreferrer"
+              >
+                {{ cta.label }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="toad-specs">
+    <div class="container">
+      <h2>Especificaciones tecnicas</h2>
+      <div class="specs-grid">
+        <article class="spec-card" *ngFor="let spec of technicalSpecs">
+          <h3>{{ spec.title }}</h3>
+          <ul>
+            <li *ngFor="let item of spec.items">{{ item }}</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  </main>
+<app-shared-contact></app-shared-contact>
+
+
+
+
+
+
+

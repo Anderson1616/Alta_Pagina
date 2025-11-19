@@ -1,0 +1,199 @@
+<header class="main-header">
+  <div class="container">
+    <a class="brand" href="#" aria-label="Alta Tecnología S.A.">
+      <img
+        class="brand-logo"
+        src="https://static.wixstatic.com/media/4ec771_c90b2a96de914acc8788796d7ca0bf97~mv2.png/v1/fill/w_124,h_47,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_c90b2a96de914acc8788796d7ca0bf97~mv2.png"
+        alt=""
+      />
+      <span class="visually-hidden">Alta Tecnología S.A.</span>
+    </a>
+
+    <nav class="main-nav" aria-label="Principal">
+      <a href="#servicios" (click)="navigateTo('servicios', $event)">Servicios</a>
+      <a href="#productos" (click)="navigateTo('productos', $event)">Productos</a>
+      <a href="#capacitaciones" (click)="navigateTo('capacitaciones', $event)">Capacitaciones</a>
+      <a href="#transformacion" (click)="navigateTo('transformacion', $event)">Transformación Digital</a>
+      <a href="#clientes" (click)="navigateTo('clientes', $event)">Clientes</a>
+      <a href="#valor" (click)="navigateTo('valor', $event)">Nosotros</a>
+      <a href="#contacto" (click)="navigateTo('contacto', $event)">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="profile-wrapper">
+        <button
+          type="button"
+          class="icon-button"
+          aria-label="Iniciar sesión"
+          (click)="toggleProfileMenu()"
+          [attr.aria-expanded]="currentUserEmail ? isProfileMenuOpen : isLoginOpen"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M4 20c0-4.4 3.6-8 8-8s8 3.6 8 8"></path>
+          </svg>
+        </button>
+
+        <div *ngIf="currentUserEmail && isProfileMenuOpen" class="profile-menu">
+          <p>{{ currentUserEmail }}</p>
+          <button type="button" (click)="logout()">Cerrar sesión</button>
+        </div>
+      </div>
+
+      <div class="cart-wrapper">
+        <button type="button" class="icon-button" aria-label="Ver carrito" (click)="toggleCart()">
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 5h2.2l1.6 8.5H17l1.2-6H8.7"></path>
+            <circle cx="9.5" cy="18.5" r="1.5"></circle>
+            <circle cx="16.5" cy="18.5" r="1.5"></circle>
+          </svg>
+          <ng-container *ngIf="(cartItems$ | async) as cartItems">
+            <span class="cart-badge" *ngIf="cartItemCount(cartItems)">{{ cartItemCount(cartItems) }}</span>
+          </ng-container>
+        </button>
+
+        <section *ngIf="isCartOpen" class="cart-panel" aria-label="Resumen del carrito">
+          <ng-container *ngIf="(cartItems$ | async) as items">
+            <header class="cart-panel__header">
+              <div>
+                <p class="cart-panel__title">Carrito</p>
+                <small class="cart-panel__subtitle">Cursos guardados ({{ cartItemCount(items) }})</small>
+              </div>
+              <button type="button" class="cart-panel__close" aria-label="Cerrar" (click)="toggleCart()">&times;</button>
+            </header>
+
+            <ng-container *ngIf="items.length; else emptyCart">
+              <ul class="cart-panel__list">
+                <li *ngFor="let item of items">
+                  <div>
+                    <p class="cart-item__title">{{ item.title }}</p>
+                    <span class="cart-item__description">{{ item.description }}</span>
+                  </div>
+                  <div class="cart-item__actions">
+                    <span class="cart-item__quantity">x{{ item.quantity }}</span>
+                    <button
+                      type="button"
+                      class="cart-item__remove"
+                      aria-label="Eliminar {{ item.title }} del carrito"
+                      (click)="removeCartItem(item.id)"
+                    >
+                      &times;
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </ng-container>
+            <ng-template #emptyCart>
+              <div class="cart-panel__empty" role="status">
+                <img src="https://static.thenounproject.com/png/1402819-200.png" alt="" aria-hidden="true" />
+                <p>No tienes cursos agregados todavía.</p>
+                <span>Explora nuestras capacitaciones y agrégalas aquí.</span>
+              </div>
+            </ng-template>
+            <footer class="cart-panel__footer">
+              <button type="button" class="btn-primary" [disabled]="!cartHasItems(items)">
+                Pagar ({{ cartItemCount(items) }})
+              </button>
+            </footer>
+          </ng-container>
+        </section>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div *ngIf="isLoginOpen" class="login-overlay" (click)="closeLogin()">
+  <section
+    class="login-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="login-title"
+    (click)="$event.stopPropagation()"
+  >
+    <header class="login-modal__header">
+      <h2 id="login-title">Iniciar sesión</h2>
+      <button type="button" class="login-close" aria-label="Cerrar" (click)="closeLogin()">&times;</button>
+    </header>
+    <form class="login-form" (submit)="handleLoginSubmit($event)">
+      <label>
+        Usuario
+        <input type="email" name="loginEmail" placeholder="correo@empresa.com" required />
+      </label>
+      <label>
+        Contraseña
+        <input type="password" name="loginPassword" placeholder="********" required />
+      </label>
+      <p class="form-error" *ngIf="loginError">{{ loginError }}</p>
+      <div class="login-actions">
+        <button type="submit" class="btn-primary">Ingresar</button>
+        <button type="button" class="btn-secondary" (click)="openRegister()">Registrarse</button>
+      </div>
+      <button type="button" class="btn-google">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="" aria-hidden="true" />
+        Continuar con Google
+      </button>
+    </form>
+  </section>
+</div>
+
+<div *ngIf="isRegisterOpen" class="login-overlay" (click)="closeLogin()">
+  <section
+    class="login-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="register-title"
+    (click)="$event.stopPropagation()"
+  >
+    <header class="login-modal__header">
+      <h2 id="register-title">Crear cuenta</h2>
+      <button type="button" class="login-close" aria-label="Cerrar" (click)="closeLogin()">&times;</button>
+    </header>
+    <form class="login-form" (submit)="handleRegisterSubmit($event)">
+      <label>
+        Nombre completo
+        <input type="text" name="fullName" placeholder="Tu nombre" required />
+      </label>
+      <label>
+        Correo electrónico
+        <input type="email" name="email" placeholder="correo@empresa.com" required />
+      </label>
+      <label>
+        Contraseña
+        <input type="password" name="password" placeholder="********" required />
+      </label>
+      <label>
+        Confirmar contraseña
+        <input type="password" name="confirmPassword" placeholder="********" required />
+      </label>
+      <p class="form-error" *ngIf="registerError">{{ registerError }}</p>
+      <div class="login-actions">
+        <button type="submit" class="btn-primary">Registrarme</button>
+        <button type="button" class="btn-secondary" (click)="openLogin()">Ya tengo cuenta</button>
+      </div>
+      <button type="button" class="btn-google">
+        <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" alt="" aria-hidden="true" />
+        Registrarse con Google
+      </button>
+    </form>
+  </section>
+</div>
+
+<div class="toast" *ngIf="toastVisible">
+  {{ toastMessage }}
+</div>

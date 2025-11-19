@@ -1,0 +1,285 @@
+:host {
+  display: block;
+  background: var(--page-bg) !important;
+}
+
+.solarwinds__hero {
+  min-height: clamp(260px, 50vw, 460px);
+  background: url("https://static.wixstatic.com/media/e546e4fda51547a287b459c10d25937b.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e546e4fda51547a287b459c10d25937b.jpg")
+    center / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solarwinds__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 62, 76, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 4vw, 2.5rem);
+}
+
+.solarwinds__hero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 6vw, 3.6rem);
+  text-align: center;
+  z-index: 1;
+}
+
+.solarwinds__badge {
+  width: clamp(140px, 22vw, 230px);
+  height: auto;
+  z-index: 1;
+}
+
+.solarwinds__finger {
+  width: clamp(110px, 20vw, 180px);
+  height: auto;
+  z-index: 1;
+}
+
+.solarwinds__video {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(3rem, 7vw, 4rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  align-items: center;
+}
+
+.solarwinds__video-wrapper {
+  width: min(900px, 96vw);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.solarwinds__video iframe {
+  width: 100%;
+  height: clamp(220px, 45vw, 420px);
+  border: 0;
+  display: block;
+}
+
+.solarwinds__text-block {
+  width: min(900px, 96vw);
+  color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  line-height: 1.7;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  box-shadow: 0 25px 45px rgba(7, 24, 42, 0.12);
+}
+
+.solarwinds__platform {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+}
+
+.solarwinds__platform-inner {
+  width: min(1100px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.solarwinds__platform-header {
+  background: transparent;
+  color: #0a5060;
+  padding: 0.2rem 0;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.solarwinds__platform-lead {
+  margin: 0;
+  text-align: center;
+  color: #1c1c1c;
+  line-height: 1.5;
+  font-size: 1.05rem;
+}
+
+.solarwinds__cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 2vw, 1.25rem);
+  width: 100%;
+}
+
+.solarwinds-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.solarwinds-card h3 {
+  margin: 0;
+  background: transparent;
+  color: #0a5060;
+  padding: 0.75rem 1rem 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.solarwinds-card__body {
+  padding: 0.9rem 1rem 1.1rem;
+  color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: center;
+  align-items: center;
+}
+
+.solarwinds-card__body strong {
+  font-size: 0.95rem;
+  font-weight: 400;
+  display: block;
+  color: #1c1c1c;
+}
+
+.solarwinds-card__body ul {
+  margin: 0 auto;
+  padding-left: 1.1rem;
+  display: inline-block;
+  text-align: left;
+  gap: 0.3rem;
+}
+
+.solarwinds__orion-icons {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(3rem, 7vw, 4rem);
+}
+
+.solarwinds__orion-inner {
+  width: min(1100px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.solarwinds__orion-header {
+  background: transparent;
+  color: #0a5060;
+  padding: 0;
+  border-radius: 0;
+}
+
+.solarwinds__orion-header h2 {
+  margin: 0;
+  letter-spacing: 0.06em;
+}
+
+.solarwinds__orion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(160px, 1fr));
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  width: 100%;
+  justify-items: center;
+}
+
+.solarwinds-orion-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+  color: #1c1c1c;
+}
+
+.solarwinds-orion-tile__image {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.solarwinds-orion-tile__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.solarwinds-orion-tile p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.solarwinds__solutions {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+}
+
+.solarwinds__solutions-inner {
+  width: min(1100px, 96vw);
+  margin: 0 auto;
+}
+
+.solarwinds__solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: clamp(1rem, 2vw, 1.25rem);
+}
+
+.solarwinds-solution {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.solarwinds-solution h3 {
+  margin: 0;
+  background: transparent;
+  color: #0a5060;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.solarwinds-solution__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: #1c1c1c;
+  text-align: center;
+  align-items: center;
+}
+
+.solarwinds-solution__body strong {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #1c1c1c;
+}
+
+.solarwinds-solution__body ul {
+  margin: 0 auto;
+  padding-left: 1.1rem;
+  display: inline-block;
+  text-align: left;
+  gap: 0.35rem;
+}

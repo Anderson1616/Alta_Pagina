@@ -1,0 +1,346 @@
+:host {
+  display: block;
+  background: var(--page-bg) !important;
+}
+
+.foglight-evolve {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 8vw, 4.5rem);
+}
+
+.foglight-evolve__hero {
+  position: relative;
+  min-height: clamp(240px, 45vw, 420px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: url("https://static.wixstatic.com/media/fefbb1e69df546d0b5e1e73d6b8f3844.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fefbb1e69df546d0b5e1e73d6b8f3844.jpg")
+    center / cover no-repeat;
+}
+
+.foglight-evolve__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(6, 111, 125, 0.9), rgba(26, 133, 148, 0.8));
+}
+
+.foglight-evolve__hero-content {
+  position: relative;
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: clamp(2rem, 6vw, 3rem);
+}
+
+.foglight-evolve__logo {
+  width: min(320px, 70vw);
+  height: auto;
+}
+
+.foglight-evolve__hero-content h1 {
+  margin: 0;
+  letter-spacing: 0.2em;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  text-transform: uppercase;
+}
+
+.foglight-evolve__insight {
+  width: min(1100px, 95vw);
+  margin: 0 auto clamp(3rem, 8vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.foglight-evolve__insight-card {
+  background: #ffffff;
+  border-radius: 32px;
+  box-shadow: 0 30px 65px rgba(9, 26, 44, 0.15);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: clamp(1rem, 4vw, 2.5rem);
+  align-items: center;
+}
+
+.foglight-evolve__media iframe {
+  width: 100%;
+  min-height: clamp(220px, 40vw, 320px);
+  border-radius: 18px;
+  border: none;
+  box-shadow: 0 15px 40px rgba(18, 36, 54, 0.2);
+}
+
+.foglight-evolve__vision p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #1f2f3d;
+}
+
+.foglight-evolve__insight-title {
+  margin: 0 auto clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #0f6a7d;
+  text-align: center;
+}
+
+.foglight-evolve__summary {
+  background: #ffffff;
+  border-radius: 32px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 25px 60px rgba(7, 24, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.foglight-evolve__summary h3 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
+  color: #0d2438;
+}
+
+.foglight-evolve__summary p {
+  margin: 0;
+  line-height: 1.8;
+  color: #1b3448;
+}
+
+.foglight-evolve__testimonial h4 {
+  margin: 0 0 1rem;
+  font-size: 1.15rem;
+  color: #0d2438;
+  font-weight: 600;
+}
+
+.foglight-evolve__testimonial-media iframe {
+  width: 100%;
+  min-height: clamp(220px, 40vw, 320px);
+  border-radius: 18px;
+  border: none;
+  box-shadow: 0 15px 40px rgba(18, 36, 54, 0.2);
+}
+
+.foglight-evolve__cards {
+  background: transparent;
+  padding: clamp(3rem, 8vw, 5.5rem) 1rem clamp(4rem, 10vw, 6rem);
+  color: #0b1f33;
+}
+
+.foglight-evolve__cards-inner {
+  width: min(1200px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.foglight-evolve__cards-header h2 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  text-align: center;
+}
+
+.foglight-evolve__cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.foglight-card {
+  background: #ffffff;
+  padding: clamp(1.25rem, 3vw, 1.9rem);
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(10, 25, 44, 0.12);
+  border: 1px solid rgba(11, 32, 55, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.foglight-card h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #0a3a69;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.foglight-card p {
+  margin: 0;
+  line-height: 1.7;
+  color: #1f3245;
+}
+
+.foglight-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #1f3245;
+  line-height: 1.7;
+}
+
+.foglight-evolve__demo {
+  background: transparent;
+  padding: clamp(3rem, 8vw, 5rem) 1rem clamp(4rem, 10vw, 6rem);
+}
+
+.foglight-evolve__demo-inner {
+  width: min(900px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  text-align: center;
+}
+
+.foglight-evolve__demo-inner h2 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+  color: #0a3a69;
+}
+
+.foglight-evolve__demo-video iframe {
+  width: min(900px, 96vw);
+  min-height: clamp(220px, 45vw, 420px);
+  border: none;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(7, 24, 42, 0.15);
+}
+
+.foglight-evolve__demo-list {
+  width: min(900px, 96vw);
+  background: #ffffff;
+  border-radius: 16px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: 0 15px 40px rgba(7, 24, 42, 0.12);
+  text-align: left;
+}
+
+.foglight-evolve__demo-list h3 {
+  margin: 0 0 1rem;
+  font-size: 1.2rem;
+  color: #0a3a69;
+  text-align: center;
+}
+
+.foglight-evolve__demo-list ol {
+  margin: 0;
+  padding-left: 1.5rem;
+  columns: 2;
+  column-gap: 2rem;
+  font-size: 0.95rem;
+  color: #1f3245;
+  line-height: 1.6;
+  text-align: left;
+  list-style-position: inside;
+}
+
+.foglight-evolve__demo-list li {
+  text-align: left;
+}
+
+.foglight-evolve__resources {
+  background: transparent;
+  padding: clamp(3rem, 8vw, 5rem) 1rem clamp(5rem, 9vw, 6rem);
+}
+
+.foglight-evolve__resources-inner {
+  width: min(1200px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.foglight-evolve__resources-inner h2 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  color: #0a3a69;
+  text-align: center;
+}
+
+.foglight-evolve__resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  justify-items: center;
+}
+
+.foglight-resource {
+  background: #f9fbfd;
+  border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(9, 32, 52, 0.12);
+  border: 1px solid rgba(12, 35, 59, 0.08);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.foglight-resource img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.foglight-resource span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f2f4a;
+}
+
+.foglight-resource:hover,
+.foglight-resource:focus {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px rgba(7, 23, 41, 0.2);
+}
+
+.foglight-evolve__cta {
+  display: flex;
+  justify-content: center;
+}
+
+.foglight-evolve__cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.5rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0b6a80, #0a8ba3);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.2s ease;
+  border: none;
+}
+
+.foglight-evolve__cta-button:hover,
+.foglight-evolve__cta-button:focus {
+  background: linear-gradient(135deg, #0a618c, #0a78a1);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+
+

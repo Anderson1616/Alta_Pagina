@@ -1,0 +1,145 @@
+:host {
+  display: block;
+  background: var(--page-bg) !important;
+}
+
+/* Card sizing variables — change these to tune card size globally for this view */
+:host {
+  --card-padding: clamp(0.75rem, 2.2vw, 1rem);
+  --card-radius: 8px;
+  --card-shadow: 0 6px 16px rgba(2, 24, 30, 0.06);
+  --card-margin: 0.75rem auto;
+  --image-min: 140px;
+  --image-max: 180px;
+  --content-max-width: 760px;
+  --content-vw: 94vw;
+}
+
+.soluciones__hero {
+  min-height: clamp(260px, 50vw, 360px);
+  background: url("https://static.wixstatic.com/media/4ec771_086baf5e6c674af5b51d59ad7d9cd94b~mv2_d_5616_3744_s_4_2.jpg/v1/fill/w_1901,h_342,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_086baf5e6c674af5b51d59ad7d9cd94b~mv2_d_5616_3744_s_4_2.jpg")
+    center / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soluciones__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 62, 76, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.soluciones__hero h1 {
+  position: relative;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+  text-align: center;
+}
+
+.soluciones__content {
+  background: transparent;
+  padding: clamp(1rem, 3vw, 1.5rem) 1rem; /* vertical spacing around centered card */
+}
+
+.soluciones__content-inner {
+  width: min(var(--content-max-width), var(--content-vw));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(var(--image-min), var(--image-max)) 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+  /* card styling: white centered box that does not span full width */
+  background: #ffffff;
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  margin-block: var(--card-margin);
+}
+
+.soluciones__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.soluciones__text h2 {
+  margin: 0 0 0.75rem 0;
+  color: #1c1c1c;
+  font-size: 1.3rem;
+}
+
+.soluciones__columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.soluciones__columns ul {
+  margin: 0;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #1c1c1c;
+}
+
+.soluciones__stack {
+  background: transparent;
+  padding: clamp(1rem, 3vw, 1.5rem) 1rem;
+}
+
+.soluciones__stack--gray {
+  /* visual variant kept but content will be inside white boxes */
+  background: transparent;
+}
+
+.soluciones__stack-inner {
+  width: min(var(--content-max-width), var(--content-vw));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(var(--image-min), var(--image-max)) 1fr;
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+  align-items: center;
+  /* card styling: white centered box that does not span full width */
+  background: #ffffff;
+  padding: var(--card-padding);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  margin-block: var(--card-margin);
+}
+
+.soluciones__stack-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.soluciones__stack-text h3 {
+  margin: 0 0 0.75rem 0;
+  font-size: 1.2rem;
+  color: #1c1c1c;
+}
+
+.soluciones__stack-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.soluciones__stack-columns ul {
+  margin: 0;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #1c1c1c;
+}
+
+
+

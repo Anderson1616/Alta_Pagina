@@ -1,0 +1,244 @@
+﻿<app-shared-header></app-shared-header>
+
+<main class="salas-inteligentes" aria-label="Salas Inteligentes">
+  <section class="salas-inteligentes__hero">
+    <div class="salas-inteligentes__hero-content">
+      <p>Ideales para reuniones y capacitaciones</p>
+      <h1>Salas Inteligentes</h1>
+    </div>
+  </section>
+
+  <section class="salas-inteligentes__details">
+    <div class="salas-inteligentes__details-inner">
+      <p>
+        Contamos con soluciones inmediatas dentro del esquema de oficinas todo incluido:
+      </p>
+      <ul>
+        <li>Oficinas, clases y escritorios virtuales.</li>
+        <li>Sala de reuniones.</li>
+        <li>Sala de capacitaciones.</li>
+      </ul>
+      <p>Nuestras soluciones están dirigidas a quienes requieren:</p>
+      <ul>
+        <li>Proyectar una excelente imagen corporativa.</li>
+        <li>Enfocar el 100% del tiempo en su negocio.</li>
+        <li>Mantener sus costos operativos bajos.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="salas-inteligentes__room">
+    <header class="salas-inteligentes__room-header">
+      <h2>Sala Chirripó</h2>
+    </header>
+    <div class="salas-inteligentes__room-layout">
+      <div class="salas-inteligentes__room-info">
+        <div class="room-badge">
+          <img
+            src="https://static.wixstatic.com/media/4ec771_5290fc08c21049e18cdb383a5d6fd310~mv2_d_2344_2344_s_2.png/v1/fill/w_384,h_384,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_5290fc08c21049e18cdb383a5d6fd310~mv2_d_2344_2344_s_2.png"
+            alt="Sala Chirripó"
+          />
+        </div>
+        <div class="room-capacity">
+          <div>
+            <img
+              src="https://static.wixstatic.com/media/4ec771_0895b6d3d4b143fc87d91a5e5bb168d0~mv2.png/v1/fill/w_152,h_188,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Asset%201.png"
+              alt="30 personas sin VDI"
+            />
+          </div>
+          <div>
+            <img
+              src="https://static.wixstatic.com/media/4ec771_64d909494e1449f28ae444a0dd89dea0~mv2.png/v1/fill/w_152,h_188,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Asset%202.png"
+              alt="14 personas con VDI"
+            />
+          </div>
+        </div>      </div>
+      <div class="salas-inteligentes__room-media">
+        <img
+          [src]="roomViews[selectedRoomIndex].src"
+          [alt]="roomViews[selectedRoomIndex].alt"
+        />
+        <div class="salas-inteligentes__room-thumbs">
+          <button
+            type="button"
+            *ngFor="let view of roomViews; let i = index"
+            [class.active]="i === selectedRoomIndex"
+            (click)="selectRoom(i)"
+          >
+            <img [src]="view.src" [alt]="view.alt" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="salas-inteligentes__features" aria-label="Características Sala Chirripó">
+    <div class="salas-inteligentes__features-card">
+      <div class="salas-inteligentes__features-header">
+        <h3>CARACTERÍSTICAS</h3>
+      </div>
+      <div class="salas-inteligentes__features-grid">
+        <article class="feature-card" *ngFor="let feature of features">
+          <img
+            [src]="feature.icon"
+            [alt]="feature.line2 ? feature.line1 + ' ' + feature.line2 : feature.line1"
+          />
+        </article>
+      </div>
+      <div class="salas-inteligentes__schedule">
+        <strong>HORARIO:</strong>
+        <p>Disponible por hora o por días</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="salas-inteligentes__room salas-inteligentes__room--irazu">
+    <header class="salas-inteligentes__room-header">
+      <h2>Sala Irazú</h2>
+    </header>
+    <div class="salas-inteligentes__room-layout">
+      <div class="salas-inteligentes__room-info">
+        <div class="room-badge">
+          <img
+            src="http://static.wixstatic.com/media/4ec771_f6cc5ec176d84c10be2fcb6a14cb5225~mv2_d_2343_2343_s_2.png/v1/fill/w_362,h_362,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_f6cc5ec176d84c10be2fcb6a14cb5225~mv2_d_2343_2343_s_2.png"
+            alt="Sala Irazú"
+          />
+        </div>
+        <div class="room-capacity room-capacity--irazu">
+          <div>
+            <img
+              src="https://static.wixstatic.com/media/4ec771_5a6f3a07d79d4eb0ab005f7ded760945~mv2.png/v1/crop/x_0,y_1,w_370,h_406/fill/w_350,h_384,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2.png"
+              alt="8 personas"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="salas-inteligentes__room-media">
+        <img
+          [src]="irazuViews[selectedIrazuIndex].src"
+          [alt]="irazuViews[selectedIrazuIndex].alt"
+        />
+        <div class="salas-inteligentes__room-thumbs">
+          <button
+            type="button"
+            *ngFor="let view of irazuViews; let i = index"
+            [class.active]="i === selectedIrazuIndex"
+            (click)="selectIrazu(i)"
+          >
+            <img [src]="view.src" [alt]="view.alt" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="salas-inteligentes__extras" aria-label="Características y servicios Sala Irazú">
+    <div class="salas-inteligentes__extras-card">
+      <div class="salas-inteligentes__features-header">
+        <h3>CARACTERÍSTICAS</h3>
+      </div>
+      <div class="salas-inteligentes__features-grid">
+        <article class="feature-card" *ngFor="let feature of irazuFeatures">
+          <img
+            [src]="feature.icon"
+            [alt]="feature.line2 ? feature.line1 + ' ' + feature.line2 : feature.line1"
+          />
+        </article>
+      </div>
+      <div class="salas-inteligentes__extras-info">
+        <div class="extras-info extras-info__schedule">
+          <strong>HORARIO:</strong>
+          <p>Disponible por hora o por días</p>
+        </div>
+        <div class="extras-info extras-info__services">
+          <strong>OTROS SERVICIOS:</strong>
+          <ul>
+            <li *ngFor="let service of irazuServices">
+              <span>{{ service.label }}</span>
+              <ul *ngIf="service.subItems">
+                <li *ngFor="let item of service.subItems">- {{ item }}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="salas-inteligentes__room salas-inteligentes__room--poas">
+    <header class="salas-inteligentes__room-header">
+      <h2>Sala Poás</h2>
+    </header>
+    <div class="salas-inteligentes__room-layout">
+      <div class="salas-inteligentes__room-info salas-inteligentes__room-info--poas">
+        <div class="room-badge">
+          <img
+            src="https://static.wixstatic.com/media/4ec771_f4eb95dc8179466f834baf7316b846b6~mv2_d_2344_2344_s_2.png/v1/fill/w_384,h_384,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_f4eb95dc8179466f834baf7316b846b6~mv2_d_2344_2344_s_2.png"
+            alt="Sala Poás"
+          />
+        </div>
+        <div class="room-capacity room-capacity--poas">
+          <div>
+            <img
+              src="https://static.wixstatic.com/media/4ec771_3cc43dc0680c467ea248146c185fb518~mv2.png/v1/fill/w_294,h_324,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4.png"
+              alt="6 personas"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="salas-inteligentes__room-media salas-inteligentes__room-media--poas">
+        <img
+          [src]="poasViews[selectedPoasIndex].src"
+          [alt]="poasViews[selectedPoasIndex].alt"
+        />
+        <div class="salas-inteligentes__room-thumbs">
+          <button
+            type="button"
+            *ngFor="let view of poasViews; let i = index"
+            [class.active]="i === selectedPoasIndex"
+            (click)="selectPoas(i)"
+          >
+            <img [src]="view.src" [alt]="view.alt" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="salas-inteligentes__extras" aria-label="Características y servicios Sala Poás">
+    <div class="salas-inteligentes__extras-card">
+      <div class="salas-inteligentes__features-header">
+        <h3>CARACTERÍSTICAS</h3>
+      </div>
+      <div class="salas-inteligentes__features-grid">
+        <article class="feature-card" *ngFor="let feature of poasFeatures">
+          <img
+            [src]="feature.icon"
+            [alt]="feature.line2 ? feature.line1 + ' ' + feature.line2 : feature.line1"
+          />
+        </article>
+      </div>
+      <div class="salas-inteligentes__extras-info">
+        <div class="extras-info extras-info__schedule">
+          <strong>HORARIO:</strong>
+          <p>Disponible por hora o por días</p>
+        </div>
+        <div class="extras-info extras-info__services">
+          <strong>OTROS SERVICIOS:</strong>
+          <ul>
+            <li *ngFor="let service of poasServices">
+              <span>{{ service.label }}</span>
+              <ul *ngIf="service.subItems">
+                <li *ngFor="let item of service.subItems">- {{ item }}</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<app-shared-contact></app-shared-contact>
+

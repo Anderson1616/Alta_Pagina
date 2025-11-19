@@ -1,0 +1,180 @@
+<app-shared-header></app-shared-header>
+
+<main class="estudio-pa" aria-label="Estudio de Producción Audiovisual">
+  <section class="estudio-pa__hero">
+    <div class="estudio-pa__hero-content">
+      <p>Estudio de producción</p>
+      <h1>Audiovisual</h1>
+    </div>
+  </section>
+
+  <section class="estudio-pa__virtual">
+    <div class="estudio-pa__virtual-inner">
+      <div class="estudio-pa__virtual-header">
+        <h2>Recorrido virtual 360</h2>
+      </div>
+      <p>
+        Contamos con un ambiente perfecto para la creación de un audiovisual. El estudio es único en Costa Rica. Está
+        acondicionado para aislar el ruido exterior, además cuenta con un ciclograma de 4,30 m de ancho x 3,70 m de
+        profundidad, un mixer de A/V de 4 micrófonos de alta sensibilidad para la grabación de audio.
+      </p>
+    </div>
+  </section>
+
+  <section class="estudio-pa__visuals">
+    <div class="estudio-pa__visuals-inner">
+      <div class="estudio-pa__visual estudio-pa__visual--tour">
+        <iframe
+          src="https://my.matterport.com/show/?m=q5CB49tMwWT"
+          title="Recorrido 360 Alta Tecnología"
+          frameborder="0"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+      <div class="estudio-pa__visual estudio-pa__visual--measures">
+        <img
+          src="https://static.wixstatic.com/media/4ec771_e8ef9bf71d7940268f49fb7f7dec916a~mv2_d_3928_3213_s_4_2.png/v1/fill/w_666,h_544,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/MedidasREAL.png"
+          alt="Dimensiones del estudio"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section class="estudio-pa__recording">
+    <div class="estudio-pa__recording-inner">
+      <div class="estudio-pa__recording-header">
+        <h2>Estudio de grabación</h2>
+      </div>
+      <div class="estudio-pa__recording-video">
+        <iframe
+          src="https://www.youtube.com/embed/4uf_wrTNde8"
+          title="Estudio de Grabación - Alta Tecnología"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="estudio-pa__equipment">
+    <div class="estudio-pa__equipment-header">
+      <h2>Equipo audiovisual</h2>
+    </div>
+    <div class="equipment-carousel">
+      <button
+        type="button"
+        class="equipment-carousel__nav equipment-carousel__nav--prev"
+        aria-label="Anterior"
+        (click)="goToPrevious()"
+      >
+        &#10094;
+      </button>
+      <div class="equipment-carousel__viewport">
+        <figure class="equipment-carousel__image">
+          <img [src]="currentEquipment.image" [alt]="currentEquipment.title" loading="lazy" />
+        </figure>
+        <div class="equipment-carousel__details">
+          <h3>{{ currentEquipment.title }}</h3>
+          <ul>
+            <li *ngFor="let line of currentEquipment.details; trackBy: trackDetail">{{ line }}</li>
+          </ul>
+        </div>
+      </div>
+      <button
+        type="button"
+        class="equipment-carousel__nav equipment-carousel__nav--next"
+        aria-label="Siguiente"
+        (click)="goToNext()"
+      >
+        &#10095;
+      </button>
+    </div>
+    <div class="equipment-carousel__dots">
+      <button
+        type="button"
+        *ngFor="let item of equipmentItems; let i = index"
+        [class.active]="i === currentIndex"
+        (click)="goToIndex(i)"
+        [attr.aria-label]="'Mostrar ' + item.title"
+      ></button>
+    </div>
+  </section>
+
+  <section class="estudio-pa__experience">
+    <div class="estudio-pa__experience-inner">
+      <div class="estudio-pa__experience-header">
+        <h2>La experiencia en nuestro estudio</h2>
+      </div>
+      <div class="estudio-pa__experience-card">
+        <p>
+          Nuestros clientes hablan un poco sobre su experiencia al utilizar el estudio en la elaboración de sus proyectos
+          audiovisuales.
+        </p>
+        <div class="estudio-pa__experience-video">
+          <iframe
+            src="https://www.youtube.com/embed/yUdMLGAS1BE"
+            title="Experiencia en nuestro estudio"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="estudio-pa__gallery">
+    <div class="estudio-pa__gallery-header">
+      <h2>Fotos</h2>
+      <p>Acá podés ver un poco más de todo lo que logran hacer nuestros clientes en el estudio.</p>
+    </div>
+    <figure
+      class="estudio-pa__gallery-preview"
+      *ngIf="galleryItems[selectedGalleryIndex]"
+      aria-live="polite"
+    >
+      <img
+        [src]="galleryItems[selectedGalleryIndex].src"
+        [alt]="galleryItems[selectedGalleryIndex].alt"
+        loading="lazy"
+      />
+    </figure>
+    <div class="estudio-pa__gallery-accordion">
+      <button
+        type="button"
+        *ngFor="let photo of galleryItems; let i = index"
+        class="gallery-panel"
+        [class.gallery-panel--active]="i === selectedGalleryIndex"
+        (click)="selectGallery(i)"
+        [attr.aria-label]="'Ver foto ' + (i + 1)"
+      >
+        <img [src]="photo.src" [alt]="photo.alt" loading="lazy" />
+      </button>
+    </div>
+  </section>
+
+  <section class="estudio-pa__produced">
+    <div class="estudio-pa__produced-content">
+      <div class="estudio-pa__produced-header">
+        <h2>Videos producidos en nuestro estudio</h2>
+      </div>
+      <p>El resultado final de los proyectos que se desarrollan en El Estudio de Alta Tecnología.</p>
+      <div class="estudio-pa__produced-video">
+        <iframe
+          src="https://www.youtube.com/embed/bVcPTEq8i8E"
+          title="Videos producidos en nuestro estudio"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-shared-contact></app-shared-contact>

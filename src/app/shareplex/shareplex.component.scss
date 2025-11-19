@@ -1,0 +1,537 @@
+:host {
+  display: block;
+  background: var(--page-bg) !important;
+}
+
+.shareplex {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--page-bg) !important;
+}
+
+.shareplex__hero {
+  min-height: clamp(240px, 45vw, 420px);
+  background: url("https://static.wixstatic.com/media/4ec771_d2168bda44874d7392808d8048e9b2f1~mv2_d_3888_2592_s_4_2.jpeg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_d2168bda44874d7392808d8048e9b2f1~mv2_d_3888_2592_s_4_2.jpeg")
+    center / cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shareplex__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(4, 62, 76, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shareplex__hero-content {
+  text-align: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.shareplex__hero-content h1 {
+  margin: 0;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+.shareplex__hero-content p {
+  margin: 0;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+}
+
+.shareplex__summary {
+  display: flex;
+  justify-content: center;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(3rem, 7vw, 4rem);
+}
+
+.shareplex__summary-card {
+  width: min(900px, 95vw);
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 45px rgba(7, 24, 42, 0.12);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #1c1c1c;
+  text-align: center;
+  align-items: center;
+}
+
+.shareplex__summary-card p {
+  margin: 0;
+  max-width: 780px;
+  line-height: 1.7;
+}
+
+.shareplex__benefits {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+}
+
+.shareplex__benefits-inner {
+  width: min(1100px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.shareplex__video {
+  width: min(900px, 96vw);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(7, 24, 42, 0.12);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.shareplex__video iframe {
+  width: 100%;
+  height: clamp(220px, 45vw, 380px);
+  border: 0;
+  display: block;
+}
+
+.shareplex__benefits-inner header h2 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 1.3rem;
+  color: #0a5060;
+  text-align: center;
+}
+
+.shareplex__benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+}
+
+.shareplex-benefit {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 16px 40px rgba(7, 24, 42, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  text-align: center;
+  color: #1c1c1c;
+}
+
+.shareplex-benefit img {
+  width: 110px;
+  height: auto;
+}
+
+.shareplex-benefit h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0a5060;
+}
+
+.shareplex-benefit p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.shareplex__stats {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.shareplex__stats-image {
+  display: flex;
+  justify-content: center;
+}
+
+.shareplex__stats-image img {
+  width: min(900px, 95vw);
+  max-width: 100%;
+  height: auto;
+}
+
+.shareplex__replica-card {
+  background: #ffffff;
+  border-radius: 18px;
+  max-width: min(1000px, 95vw);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 18px 40px rgba(7, 24, 42, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #1c1c1c;
+}
+
+.shareplex__replica-card h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0a5060;
+}
+
+.shareplex__replica-card p {
+  margin: 0;
+  line-height: 1.7;
+}
+
+.shareplex__cta-row {
+  display: flex;
+  justify-content: center;
+}
+
+.shareplex__replica-card .shareplex__cta {
+  background: linear-gradient(180deg, #0a8796, #0b6f7d);
+  color: #ffffff;
+  padding: 0.85rem 2.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 10px 25px rgba(10, 130, 150, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.shareplex__replica-card .shareplex__cta:hover,
+.shareplex__replica-card .shareplex__cta:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 35px rgba(10, 130, 150, 0.33);
+}
+
+.shareplex__benefits-list {
+  background: transparent !important;
+  border-top: none !important;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(3rem, 8vw, 5rem);
+}
+
+.shareplex__benefits-list-inner {
+  width: min(1100px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.shareplex__benefits-list-inner header h2 {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 1.3rem;
+  color: #0a5060;
+}
+
+.shareplex__benefits-cards {
+  display: grid;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .shareplex__benefits-cards {
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 1023px) {
+  .shareplex__benefits-cards {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+.shareplex-benefit-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 16px 40px rgba(7, 24, 42, 0.12);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+  text-align: center;
+}
+
+.shareplex-benefit-card img {
+  width: 120px;
+  height: auto;
+}
+
+.shareplex-benefit-card h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0a5060;
+}
+
+.shareplex-benefit-card p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.shareplex__features {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+}
+
+.shareplex__features-inner {
+  width: min(1100px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(7, 24, 42, 0.12);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.shareplex__features-header {
+  background: transparent;
+  color: #0a5060;
+  padding: 0;
+  margin: 0 0 1rem 0;
+  text-align: center;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.shareplex__features-header h2 {
+  margin: 0;
+}
+
+/* Ensure header has no colored background even if other rules exist */
+.shareplex__features-header,
+.shareplex__features-header h2 {
+  background: transparent !important;
+}
+
+.shareplex__features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 2vw, 1.25rem);
+}
+
+.shareplex-feature {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: #1c1c1c;
+}
+
+.shareplex-feature h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #0a5060;
+}
+
+.shareplex-feature p {
+  margin: 0;
+  line-height: 1.55;
+}
+
+.shareplex__tco-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  color: #1c1c1c;
+}
+
+.shareplex__tco-card h3 {
+  margin: 0 0 0.35rem 0;
+  color: #0a5060;
+}
+
+.shareplex__tco-card p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.shareplex__features-row {
+  margin-top: clamp(1.5rem, 3vw, 2rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 2vw, 1.25rem);
+}
+
+.shareplex__features-row .shareplex-feature,
+.shareplex__features-row .shareplex__tco-card {
+  min-height: 100%;
+}
+
+.shareplex__resources {
+  background: transparent;
+  padding: clamp(2.5rem, 7vw, 4rem) 1rem clamp(4rem, 8vw, 5rem);
+}
+
+.shareplex__resources-inner {
+  width: min(1100px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.shareplex__resources header h2 {
+  margin: 0;
+  color: #0a5060;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.shareplex__resources-panel {
+  width: min(980px, 100%);
+  background: #ffffff;
+  border-radius: 22px;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  box-shadow: 0 20px 45px rgba(7, 24, 42, 0.12);
+  display: flex;
+  justify-content: center;
+}
+
+.shareplex__resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  .shareplex__resources-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .shareplex__resources-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.shareplex-resource {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  padding: 0.75rem 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-decoration: none;
+  color: #1c1c1c;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.shareplex-resource:hover,
+.shareplex-resource:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.1);
+}
+
+.shareplex-resource__image {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.shareplex-resource__image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.shareplex-resource h3 {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.35;
+  color: #0a5060;
+}
+
+.shareplex__specs {
+  background: transparent;
+  padding: clamp(2rem, 6vw, 3.5rem) 1rem clamp(4rem, 8vw, 5rem);
+}
+
+.shareplex__specs-inner {
+  width: min(1100px, 96vw);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: 0 22px 45px rgba(7, 24, 42, 0.12);
+}
+
+.shareplex__specs-header {
+  background: transparent;
+  text-align: center;
+}
+
+.shareplex__specs-header h2 {
+  margin: 0;
+  color: #0a5060;
+  letter-spacing: 0.2em;
+  font-size: 1.4rem;
+}
+
+.shareplex__specs-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #1c1c1c;
+  background: transparent;
+  text-align: center;
+}
+
+.shareplex__specs-block h3 {
+  margin: 0 0 0.35rem 0;
+  font-size: 1rem;
+  color: #0a5060;
+}
+
+.shareplex__specs-block {
+  text-align: center;
+}
+
+.shareplex__specs-block p {
+  margin: 0;
+  display: inline-block;
+}
+
+.shareplex__specs-block ul {
+  margin: 0.25rem auto 0;
+  padding-inline-start: 1.1rem;
+  list-style: disc;
+  display: inline-block;
+  text-align: left;
+}
+
+.shareplex__specs-block li {
+  margin: 0.15rem 0;
+  line-height: 1.6;
+}
+
+.shareplex__specs-note {
+  margin: 0.5rem 0 0;
+  line-height: 1.6;
+  text-align: center;
+}

@@ -1,0 +1,249 @@
+:host {
+  display: block;
+  background: linear-gradient(180deg, #0f3f53 0%, #0c3243 100%) !important;
+  color: #f4fbff;
+}
+
+.contact {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+}
+
+.contact .container {
+  max-width: 1240px;
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 6vw, 3.5rem);
+}
+
+.contact__header h2 {
+  font-size: clamp(2.4rem, 4vw, 2.9rem);
+  margin-bottom: 0.6rem;
+}
+
+.contact__header p {
+  color: rgba(244, 251, 255, 0.82);
+  font-size: 1.05rem;
+}
+
+.contact-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 2.4rem);
+}
+
+.contact-form,
+.contact-pane {
+  border-radius: 18px;
+  background: #0d2533;
+  padding: clamp(1.8rem, 5vw, 2.8rem);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: 600;
+  color: #e3f6ff;
+}
+
+input,
+textarea {
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fdff;
+  font: inherit;
+  padding: 0.85rem 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:focus,
+textarea:focus {
+  border-color: #1ab6cf;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 0 0 3px rgba(26, 182, 207, 0.2);
+  outline: none;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.contact .btn-primary {
+  width: 100%;
+}
+
+.form-hint {
+  margin: 0;
+  color: rgba(244, 251, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+.contact-pane {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  color: rgba(244, 251, 255, 0.92);
+}
+
+.contact-pane__title {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.office-tabs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+}
+
+.office-tab {
+  border: 1px solid rgba(244, 251, 255, 0.25);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(244, 251, 255, 0.85);
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.office-tab.is-active {
+  background: rgba(26, 182, 207, 0.18);
+  color: #ffffff;
+  border-color: rgba(26, 182, 207, 0.4);
+}
+
+.office-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.office-panel[hidden] {
+  display: none;
+}
+
+.map-embed {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  min-height: 260px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #0b214f;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(111, 207, 230, 0.2);
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  pointer-events: auto;
+  touch-action: pan-x pan-y;
+}
+
+.office-info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  color: rgba(243, 251, 255, 0.9);
+}
+
+.office-info a {
+  color: #6fd0e6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.office-info a:hover,
+.office-info a:focus {
+  text-decoration: underline;
+}
+
+.office-cta {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.btn-outline {
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(111, 207, 230, 0.6);
+  color: #0b6f7d;
+  text-decoration: none;
+  font-weight: 600;
+  background: #ffffff;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-outline:hover,
+.btn-outline:focus {
+  background: rgba(111, 207, 230, 0.18);
+  color: #ffffff;
+  border-color: rgba(111, 207, 230, 0.8);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 960px) {
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-pane {
+    order: -1;
+  }
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .span-2 {
+    grid-column: auto;
+  }
+
+  .office-cta {
+    flex-direction: column;
+  }
+}
+
+.site-footer {
+  margin-top: clamp(3rem, 6vw, 4rem);
+  padding: 1.5rem 0 2rem;
+  background: linear-gradient(180deg, #0f3f53 0%, #0c3243 100%);
+  color: rgba(244, 251, 255, 0.9);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.site-footer .container {
+  max-width: 1240px;
+  margin: 0 auto;
+}

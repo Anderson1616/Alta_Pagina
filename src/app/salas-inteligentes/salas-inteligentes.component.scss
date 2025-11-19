@@ -1,0 +1,364 @@
+:host {
+  display: block;
+  background: var(--page-bg) !important;
+  --si-section-gap: clamp(2rem, 6vw, 3.5rem);
+}
+
+.salas-inteligentes {
+  display: flex;
+  flex-direction: column;
+  gap: var(--si-section-gap);
+}
+
+.salas-inteligentes__hero {
+  min-height: clamp(280px, 45vw, 420px);
+  background: linear-gradient(90deg, rgba(4, 46, 64, 0.8), rgba(4, 46, 64, 0.3)),
+    url("https://static.wixstatic.com/media/4ec771_6e6afd8d0aeb42c5845aca593aecfdcf~mv2_d_5938_3964_s_4_2.jpg/v1/fill/w_1901,h_464,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_6e6afd8d0aeb42c5845aca593aecfdcf~mv2_d_5938_3964_s_4_2.jpg")
+      center / cover no-repeat;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(2rem, 6vw, 4rem) 1rem;
+}
+
+.salas-inteligentes__hero-content {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.salas-inteligentes__hero-content p {
+  margin: 0;
+  font-size: clamp(1rem, 3vw, 1.3rem);
+}
+
+.salas-inteligentes__hero-content h1 {
+  margin: 0.3rem 0 0;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 300;
+}
+
+.salas-inteligentes__details {
+  background: var(--page-bg);
+  padding: clamp(2.5rem, 7vw, 4rem) 1rem clamp(3rem, 8vw, 4rem);
+}
+
+.salas-inteligentes__details-inner {
+  width: min(900px, 92vw);
+  margin: 0 auto;
+  color: #0f2f42;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(9, 51, 76, 0.15);
+  padding: clamp(2rem, 6vw, 3rem);
+  text-align: center;
+  align-items: center;
+}
+
+.salas-inteligentes__details-inner ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  width: min(480px, 90%);
+  margin-inline: auto;
+  text-align: left;
+}
+
+.salas-inteligentes__details-inner li {
+  margin-bottom: 0.25rem;
+}
+
+.salas-inteligentes__room {
+  background: var(--page-bg);
+  padding: clamp(2rem, 7vw, 3.5rem) 1rem clamp(2.5rem, 7vw, 4rem);
+}
+
+// Remove the light divider between stacked room sections.
+.salas-inteligentes__room + .salas-inteligentes__room {
+  margin-top: calc(-1 * var(--si-section-gap));
+}
+
+.salas-inteligentes__room-header {
+  width: min(1000px, 95vw);
+  margin: 0 auto 1.5rem;
+  color: #0a3c4f;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.salas-inteligentes__room-layout {
+  width: min(1100px, 95vw);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.5rem, 6vw, 3rem);
+  align-items: center;
+}
+
+.salas-inteligentes__room-info {
+  background: #1d2d49;
+  color: #ffffff;
+  border-radius: 18px;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.room-badge {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.room-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.room-capacity {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+
+.room-capacity strong {
+  font-size: 2rem;
+  display: block;
+}
+
+.room-capacity img {
+  width: 48px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.room-capacity small {
+  display: block;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.salas-inteligentes__room-info p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.salas-inteligentes__room-media {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 1rem;
+  box-shadow: 0 20px 50px rgba(10, 32, 48, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.salas-inteligentes__room-media img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.salas-inteligentes__room-thumbs {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.salas-inteligentes__room-thumbs button {
+  border: none;
+  padding: 0;
+  background: transparent;
+  border-radius: 8px;
+  overflow: hidden;
+  outline: 2px solid transparent;
+  transition: outline 0.2s ease;
+}
+
+.salas-inteligentes__room-thumbs button.active {
+  outline-color: #006980;
+}
+
+.salas-inteligentes__room-thumbs img {
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+  display: block;
+}
+
+.salas-inteligentes__room--irazu .salas-inteligentes__room-info {
+  background: #243654;
+}
+
+.room-capacity--irazu img {
+  width: 100px;
+  height: auto;
+}
+
+.salas-inteligentes__room-info--poas {
+  background: #1f2f4e;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.room-capacity--poas img {
+  width: 110px;
+  height: auto;
+}
+
+.salas-inteligentes__room-media--poas {
+  border: none;
+  background: #ffffff;
+}
+
+.salas-inteligentes__features {
+  padding: clamp(2rem, 6vw, 3rem) 1rem;
+  display: flex;
+  justify-content: center;
+  background: var(--page-bg);
+}
+
+.salas-inteligentes__features-card {
+  width: min(1100px, 96vw);
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 25px 55px rgba(10, 40, 60, 0.15);
+  padding: clamp(2rem, 5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.salas-inteligentes__features-card .salas-inteligentes__features-header {
+  text-align: center;
+}
+
+.salas-inteligentes__features-header h3 {
+  margin: 0;
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  letter-spacing: 0.08em;
+}
+
+.salas-inteligentes__features-grid {
+  width: min(1100px, 96vw);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: clamp(1rem, 2vw, 2rem);
+}
+
+.salas-inteligentes__features-card .salas-inteligentes__features-grid,
+.salas-inteligentes__features-card .salas-inteligentes__schedule {
+  width: 100%;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  text-align: center;
+  color: #0f2f42;
+}
+
+.feature-card img {
+  width: 70px;
+  height: 90px;
+  object-fit: contain;
+}
+
+.salas-inteligentes__schedule {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  color: #0f0f0f;
+}
+
+.salas-inteligentes__schedule strong {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.salas-inteligentes__schedule p {
+  margin: 0;
+}
+
+.salas-inteligentes__extras {
+  padding: clamp(2rem, 6vw, 3rem) 1rem clamp(3rem, 8vw, 4rem);
+  display: flex;
+  justify-content: center;
+  background: var(--page-bg);
+}
+
+.salas-inteligentes__extras-card {
+  width: min(1100px, 96vw);
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 25px 55px rgba(10, 40, 60, 0.15);
+  padding: clamp(2rem, 5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.salas-inteligentes__extras-card .salas-inteligentes__features-header {
+  text-align: center;
+}
+
+.salas-inteligentes__extras-card .salas-inteligentes__features-grid {
+  width: 100%;
+}
+
+.salas-inteligentes__extras-info {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.5rem, 4vw, 3rem);
+  color: #0f0f0f;
+}
+
+.extras-info strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.06em;
+}
+
+.extras-info__schedule p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.extras-info__services ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.extras-info__services li {
+  line-height: 1.6;
+}
+
+.extras-info__services li ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.4rem 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.95rem;
+}
