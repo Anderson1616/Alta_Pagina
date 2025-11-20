@@ -11,19 +11,29 @@
 
 .foglight-evolve__hero {
   position: relative;
-  min-height: clamp(240px, 45vw, 420px);
+  min-height: 520px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: url("https://static.wixstatic.com/media/fefbb1e69df546d0b5e1e73d6b8f3844.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fefbb1e69df546d0b5e1e73d6b8f3844.jpg")
-    center / cover no-repeat;
+  padding: clamp(6rem, 12vw, 8rem) 1.5rem clamp(6rem, 10vw, 7rem);
+}
+
+.foglight-evolve__hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 50, 68, 0.65), rgba(12, 50, 68, 0.85)),
+    url("https://static.wixstatic.com/media/fefbb1e69df546d0b5e1e73d6b8f3844.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fefbb1e69df546d0b5e1e73d6b8f3844.jpg")
+      center / cover no-repeat;
+  z-index: 0;
 }
 
 .foglight-evolve__hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(6, 111, 125, 0.9), rgba(26, 133, 148, 0.8));
+  background: transparent;
+  z-index: 1;
 }
 
 .foglight-evolve__hero-content {
@@ -34,7 +44,9 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-  padding: clamp(2rem, 6vw, 3rem);
+  padding: 0;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .foglight-evolve__logo {

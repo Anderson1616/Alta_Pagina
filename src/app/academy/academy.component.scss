@@ -14,15 +14,16 @@
 .academy-hero {
   position: relative;
   isolation: isolate;
-  min-height: clamp(320px, 50vw, 520px);
-  background: linear-gradient(180deg, rgba(8, 54, 78, 0.45), rgba(8, 54, 78, 0.75)),
+  min-height: 520px;
+  background: linear-gradient(180deg, rgba(12, 50, 68, 0.65), rgba(12, 50, 68, 0.85)),
     url("http://static.wixstatic.com/media/bd0728a98e5141ed8762dacec3b08c20.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/bd0728a98e5141ed8762dacec3b08c20.jpg")
       center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(2rem, 6vw, 4rem) 1rem;
+  padding: clamp(6rem, 12vw, 8rem) 1.5rem clamp(6rem, 10vw, 7rem);
   color: #ffffff;
+  overflow: hidden;
 }
 
 .academy-hero__content {
@@ -245,5 +246,4 @@
   height: 100%;
   border: 0;
 }
-
 

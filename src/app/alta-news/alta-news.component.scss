@@ -8,18 +8,18 @@
 }
 
 .news-hero {
-  min-height: 420px;
-  background: linear-gradient(120deg, rgba(8, 56, 74, 0.85), rgba(8, 72, 91, 0.65)),
+  min-height: 520px;
+  background: linear-gradient(180deg, rgba(12, 50, 68, 0.65), rgba(12, 50, 68, 0.85)),
     url("https://static.wixstatic.com/media/3facb850464844f58d62bf76c8ff6dae.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/3facb850464844f58d62bf76c8ff6dae.jpg")
       center / cover no-repeat;
   color: #fff;
   display: flex;
   align-items: center;
-  padding: clamp(4rem, 10vw, 6rem) clamp(1.5rem, 4vw, 4rem);
+  padding: clamp(6rem, 12vw, 8rem) 1.5rem clamp(6rem, 10vw, 7rem);
 }
 
 .news-hero__content {
-  max-width: 720px;
+  max-width: 960px;
   display: grid;
   gap: 1rem;
   margin: 0 auto;

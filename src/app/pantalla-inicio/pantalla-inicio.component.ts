@@ -239,7 +239,7 @@ export class PantallaInicioComponent implements OnInit, AfterViewInit {
         "Seguimiento de privilegios y actividad sospechosa.",
       ],
       tags: ["APM", "RUM", "Logs"],
-      routerLink: ["/productos"],
+      routerLink: ["/change-auditor-training"],
     },
     {
       searchKey: "SolarWinds",
@@ -253,7 +253,7 @@ export class PantallaInicioComponent implements OnInit, AfterViewInit {
         "Alertamiento inteligente basado en umbrales.",
       ],
       tags: ["APM", "RUM", "Logs"],
-      routerLink: ["/productos"],
+      routerLink: ["/solarwinds"],
     },
     {
       searchKey: "Soluciones",
@@ -267,7 +267,7 @@ export class PantallaInicioComponent implements OnInit, AfterViewInit {
         "Implementaciones llave en mano para TI y negocio.",
       ],
       tags: ["APM", "RUM", "Logs"],
-      routerLink: ["/productos"],
+      routerLink: ["/soluciones"],
     },
     {
       searchKey: "Webinars",
@@ -281,7 +281,7 @@ export class PantallaInicioComponent implements OnInit, AfterViewInit {
         "Material descargable y seguimiento personalizado.",
       ],
       tags: ["APM", "RUM", "Logs"],
-      routerLink: ["/productos"],
+      routerLink: ["/webinars"],
     },
   ];
 
@@ -314,7 +314,7 @@ export class PantallaInicioComponent implements OnInit, AfterViewInit {
       icon: "https://e7.pngegg.com/pngimages/946/433/png-clipart-toad-oracle-database-computer-software-quest-software-others-dump-tree-frog-thumbnail.png",
       tags: ["Herramienta", "Productividad", "Bases de datos"],
       level: "Avanzado",
-      routerLink: ["/capacitaciones"],
+      routerLink: ["toad-for-sql"],
     },
     {
       searchKey: "Change Auditor",
@@ -324,7 +324,7 @@ export class PantallaInicioComponent implements OnInit, AfterViewInit {
       icon: "https://static.wixstatic.com/media/4ec771_4b962c8495494740a072833c39eada49~mv2.png/v1/fill/w_710,h_632,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/LOGO%20AT-ACADEMY_Texto%20Blanco-01.png",
       tags: ["Auditoría", "Monitoreo", "Quest"],
       level: "Intermedio",
-      routerLink: ["/capacitaciones"],
+      routerLink: ["/change-auditor-training"],
     },
   ];
 

@@ -104,18 +104,20 @@
 
 .training-hero {
   position: relative;
-  padding: clamp(4.5rem, 10vw, 6rem) 1.5rem;
+  padding: clamp(6rem, 12vw, 8rem) 1.5rem clamp(6rem, 10vw, 7rem);
   color: #ffffff;
   text-align: center;
-  background: linear-gradient(180deg, rgba(20, 45, 62, 0.85), rgba(15, 37, 54, 0.92)),
+  background: linear-gradient(180deg, rgba(12, 50, 68, 0.65), rgba(12, 50, 68, 0.85)),
     url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  min-height: 520px;
+  overflow: hidden;
 }
 
 .training-hero::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(12, 38, 53, 0.6), rgba(12, 38, 53, 0.85));
+  background: transparent;
   pointer-events: none;
 }
 
@@ -908,7 +910,6 @@
     flex-direction: column;
   }
 }
-
 
 
 

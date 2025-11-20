@@ -144,14 +144,15 @@
 
 .hero {
   position: relative;
-  min-height: clamp(280px, 46vw, 420px);
+  min-height: 520px;
   overflow: hidden;
+  padding: clamp(6rem, 12vw, 8rem) 1.5rem clamp(6rem, 10vw, 7rem);
 }
 
 .hero__backdrop {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(180deg, rgba(6, 24, 36, 0.76), rgba(6, 24, 36, 0.6)),
+  background-image: linear-gradient(180deg, rgba(12, 50, 68, 0.65), rgba(12, 50, 68, 0.85)),
     url('https://static.wixstatic.com/media/4ec771_ff252a16a96b4ffcbf56f48b42a11014~mv2_d_7360_4912_s_4_2.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_ff252a16a96b4ffcbf56f48b42a11014~mv2_d_7360_4912_s_4_2.jpg');
   background-size: cover;
   background-position: center;
@@ -167,7 +168,7 @@
   justify-content: center;
   text-align: center;
   color: #f8fbff;
-  padding: clamp(5rem, 12vw, 6rem);
+  padding: 0;
 }
 
 .hero__overlay .container {

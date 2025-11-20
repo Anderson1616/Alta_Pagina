@@ -94,14 +94,15 @@
 
 .hero {
   position: relative;
-  min-height: clamp(320px, 48vw, 420px);
+  min-height: 520px;
   overflow: hidden;
+  padding: clamp(6rem, 12vw, 8rem) 1.5rem clamp(6rem, 10vw, 7rem);
 }
 
 .hero__backdrop {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(180deg, rgba(6, 34, 52, 0.88), rgba(6, 34, 52, 0.85)),
+  background-image: linear-gradient(180deg, rgba(12, 50, 68, 0.65), rgba(12, 50, 68, 0.85)),
     url('https://static.wixstatic.com/media/4ec771_40dfcb5c1d1d4a789bbffbf3a04490cc~mv2.jpg/v1/fill/w_1280,h_560,al_c,q_85,enc_avif,quality_auto/4ec771_40dfcb5c1d1d4a789bbffbf3a04490cc~mv2.jpg');
   background-size: cover;
   background-position: center;
@@ -111,10 +112,10 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  min-height: clamp(320px, 48vw, 420px);
+  min-height: 100%;
   text-align: center;
   color: #f4fbff;
-  padding: clamp(2rem, 6vw, 3rem);
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;

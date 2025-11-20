@@ -11,15 +11,17 @@
 }
 
 .salas-inteligentes__hero {
-  min-height: clamp(280px, 45vw, 420px);
-  background: linear-gradient(90deg, rgba(4, 46, 64, 0.8), rgba(4, 46, 64, 0.3)),
+  position: relative;
+  min-height: 520px;
+  background: linear-gradient(180deg, rgba(12, 50, 68, 0.65), rgba(12, 50, 68, 0.85)),
     url("https://static.wixstatic.com/media/4ec771_6e6afd8d0aeb42c5845aca593aecfdcf~mv2_d_5938_3964_s_4_2.jpg/v1/fill/w_1901,h_464,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4ec771_6e6afd8d0aeb42c5845aca593aecfdcf~mv2_d_5938_3964_s_4_2.jpg")
       center / cover no-repeat;
   color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(2rem, 6vw, 4rem) 1rem;
+  padding: clamp(6rem, 12vw, 8rem) 1.5rem clamp(6rem, 10vw, 7rem);
+  overflow: hidden;
 }
 
 .salas-inteligentes__hero-content {

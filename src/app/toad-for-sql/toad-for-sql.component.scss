@@ -4,22 +4,26 @@
 }
 
 .toad-sql__hero {
-  min-height: clamp(260px, 50vw, 420px);
-  background: url("https://static.wixstatic.com/media/434ae2bb64be4e25928b05b91ad818fc.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/434ae2bb64be4e25928b05b91ad818fc.jpg")
-    center / cover no-repeat;
+  min-height: 520px;
+  background: linear-gradient(180deg, rgba(12, 50, 68, 0.65), rgba(12, 50, 68, 0.85)),
+    url("https://static.wixstatic.com/media/434ae2bb64be4e25928b05b91ad818fc.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/434ae2bb64be4e25928b05b91ad818fc.jpg")
+      center / cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: clamp(6rem, 12vw, 8rem) 1.5rem clamp(6rem, 10vw, 7rem);
+  overflow: hidden;
 }
 
 .toad-sql__hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(4, 62, 76, 0.55);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1;
 }
 
 .toad-sql__hero h1 {

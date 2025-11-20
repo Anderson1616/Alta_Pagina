@@ -12,22 +12,34 @@
 }
 
 .vranger__hero {
-  min-height: clamp(280px, 45vw, 420px);
-  background: url("https://static.wixstatic.com/media/e546e4fda51547a287b459c10d25937b.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e546e4fda51547a287b459c10d25937b.jpg")
-    center / cover no-repeat;
+  min-height: 520px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+  padding: clamp(6rem, 12vw, 8rem) 1.5rem clamp(6rem, 10vw, 7rem);
+}
+
+.vranger__hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(12, 50, 68, 0.65), rgba(12, 50, 68, 0.85)),
+    url("https://static.wixstatic.com/media/e546e4fda51547a287b459c10d25937b.jpg/v1/fill/w_1901,h_989,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/e546e4fda51547a287b459c10d25937b.jpg")
+      center / cover no-repeat;
+  z-index: 0;
 }
 
 .vranger__hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(8, 68, 82, 0.75);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0;
+  z-index: 1;
 }
 
 .vranger__hero-overlay h1 {
@@ -35,6 +47,8 @@
   font-size: clamp(2rem, 6vw, 3.5rem);
   letter-spacing: 0.2em;
   color: #ffffff;
+  max-width: 960px;
+  text-align: center;
 }
 
 .vranger__assurance {
@@ -382,4 +396,3 @@
   border: 0;
   display: block;
 }
-
