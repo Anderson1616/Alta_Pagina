@@ -357,9 +357,16 @@
 .cart-panel__close {
   border: none;
   background: transparent;
-  font-size: 1.4rem;
+  font-size: 0.9rem;
   cursor: pointer;
   color: #0a3344;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cart-panel__empty {

@@ -139,9 +139,9 @@ export class ToadComponent {
     closing:
       "Trabaje de forma más inteligente y cumpla con las exigencias de los entornos de base de datos de hoy en día. TOAD simplifica los flujos de trabajo, potencia la colaboración y garantiza una base sólida para iniciativas de datos asociadas con la nube, la migración o los cambios, sin importar si usted es un analista, un administrador o un desarrollador de base de datos.",
     ctas: [
-      { label: "Prueba de concepto", link: "mailto:info@alta-tecnologia.com?subject=Prueba%20de%20concepto%20TOAD" },
+      { label: "Prueba de concepto", link: "mailto:info@alta-tecnologia.coMásubject=Prueba%20de%20concepto%20TOAD" },
       { label: "Ver recursos", link: "https://www.quest.com/toad/" },
-      { label: "Demostración en español", link: "mailto:info@alta-tecnologia.com?subject=Demo%20TOAD%20en%20español" },
+      { label: "Demostración en español", link: "mailto:info@alta-tecnologia.coMásubject=Demo%20TOAD%20en%20español" },
     ],
   };
 
@@ -224,6 +224,7 @@ export class ToadComponent {
     this.activeOfficeId = id;
   }
 }
+
 
 
 

@@ -1,6 +1,6 @@
 :host {
   display: block;
-  background: var(--page-bg);
+  background: #e8f2f6;
   color: #0d273a;
 }
 
@@ -148,6 +148,7 @@
 
 .profile {
   margin-bottom: clamp(2rem, 6vw, 4rem);
+  background: #e8f2f6;
 }
 
 .profile-card {
@@ -177,6 +178,7 @@
 
 .solutions {
   margin-bottom: clamp(2rem, 8vw, 5rem);
+  background: #e8f2f6;
 }
 
 .solutions-grid {
@@ -206,6 +208,7 @@
 
 .experience {
   padding-bottom: clamp(2rem, 8vw, 6rem);
+  background: #e8f2f6;
 }
 
 .experience .container {
@@ -253,7 +256,7 @@
 .experts {
   padding: clamp(2rem, 8vw, 5rem) 0 clamp(2rem, 10vw, 6rem);
   text-align: center;
-  background: #f4fbff;
+  background: #e8f2f6;
 }
 
 .experts-card {
@@ -309,7 +312,7 @@
 .noc {
   padding: clamp(2rem, 8vw, 5rem) 0 clamp(2rem, 10vw, 6rem);
   text-align: center;
-  background: #f4fbff;
+  background: #e8f2f6;
 }
 
 .noc-card {

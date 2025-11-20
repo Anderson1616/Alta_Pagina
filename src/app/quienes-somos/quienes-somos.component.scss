@@ -263,13 +263,24 @@ principles {
 }
 
 .company-profile .container {
-  max-width: 1080px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 0 clamp(1.2rem, 4vw, 3rem);
+  display: flex;
+  justify-content: center;
+}
+
+.company-profile__card {
+  width: 100%;
   display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 0.9fr);
   gap: clamp(2rem, 5vw, 3rem);
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 0.85fr);
   align-items: center;
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 28px 58px rgba(10, 64, 94, 0.18);
+  padding: clamp(2.2rem, 5vw, 3.1rem);
+  border: 1px solid rgba(13, 129, 151, 0.12);
 }
 
 .company-profile__content h2 {
@@ -304,11 +315,11 @@ principles {
 }
 
 .company-profile__logo-card {
-  background: #ffffff;
-  border-radius: 28px;
+  background: transparent;
+  border-radius: 20px;
   padding: clamp(1.8rem, 4vw, 2.6rem);
-  box-shadow: 0 26px 48px rgba(10, 48, 72, 0.16);
-  border: 1px solid rgba(13, 129, 151, 0.12);
+  box-shadow: none;
+  border: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -647,7 +658,12 @@ principles {
   }
 
   .company-profile .container {
+    display: flex;
+  }
+
+  .company-profile__card {
     grid-template-columns: 1fr;
+    text-align: left;
   }
 
   .company-profile__logo-card {
@@ -696,6 +712,5 @@ principles {
     flex-direction: column;
   }
 }
-
 
 

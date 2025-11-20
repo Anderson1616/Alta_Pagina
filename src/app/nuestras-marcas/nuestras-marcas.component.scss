@@ -167,11 +167,19 @@
   justify-content: center;
   text-align: center;
   color: #f8fbff;
-  padding: clamp(2rem, 6vw, 3rem);
+  padding: clamp(5rem, 12vw, 6rem);
+}
+
+.hero__overlay .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
 }
 
 .hero__overlay h1 {
-  margin: 0 auto;
+  margin: clamp(4rem, 6vw, 5rem) auto 0;
   font-size: clamp(2.5rem, 5vw, 3.4rem);
   letter-spacing: 0.08em;
   max-width: 100%;
