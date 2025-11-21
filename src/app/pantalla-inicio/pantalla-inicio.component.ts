@@ -645,6 +645,10 @@ export class PantallaInicioComponent implements OnInit, AfterViewInit {
     this.router.navigate(["/nuestras-marcas"]);
   }
 
+  goToSalasInteligentes(): void {
+    this.router.navigate(["/salas-inteligentes"]);
+  }
+
   addTrainingToCart(training: Training): void {
     this.cartService.addItem({
       id: `training-${training.searchKey}`,
