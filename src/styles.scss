@@ -50,6 +50,26 @@ body {
   text-align: center;
 }
 
+/* Copia de estilo reutilizable para bloques de título + texto (como Servicios en pantalla-inicio) */
+.section-text-block {
+  background: #f4f9fb;
+  padding: 4.5rem 0 3.5rem;
+  text-align: center;
+}
+
+.section-text-block h2 {
+  margin: 0 0 1rem;
+  font-size: 2.2rem;
+  color: #0d8197;
+}
+
+.section-text-block p {
+  max-width: 680px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #4f6575;
+}
+
 app-root,
 app-pantalla-inicio,
 app-servicios,
