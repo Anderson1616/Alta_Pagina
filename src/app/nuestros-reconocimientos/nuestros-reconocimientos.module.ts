@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
 
 import { NuestrosReconocimientosRoutingModule } from './nuestros-reconocimientos-routing.module';
 import { NuestrosReconocimientosComponent } from './nuestros-reconocimientos.component';
@@ -10,7 +9,6 @@ import { SharedModule } from '../shared/shared.module';
   declarations: [NuestrosReconocimientosComponent],
   imports: [
     CommonModule,
-    RouterModule,
     SharedModule,
     NuestrosReconocimientosRoutingModule,
   ],
