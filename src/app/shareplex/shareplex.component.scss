@@ -75,15 +75,25 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  color: #1c1c1c;
+  color: #0f3a50;
   text-align: center;
   align-items: center;
+}
+
+.shareplex__summary-card h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3.4vw, 1.9rem);
+  font-weight: 700;
+  color: #0b6a80;
+  line-height: 1.35;
 }
 
 .shareplex__summary-card p {
   margin: 0;
   max-width: 780px;
-  line-height: 1.7;
+  line-height: 1.8;
+  font-size: 1rem;
+  color: #4f6575;
 }
 
 .shareplex__benefits {
@@ -152,12 +162,14 @@
 .shareplex-benefit h3 {
   margin: 0;
   font-size: 1rem;
-  color: #0a5060;
+  font-weight: 700;
+  color: #0b6a80;
 }
 
 .shareplex-benefit p {
   margin: 0;
   line-height: 1.6;
+  color: #4f6575;
 }
 
 .shareplex__stats {
@@ -352,12 +364,14 @@
 .shareplex-feature h3 {
   margin: 0;
   font-size: 1rem;
-  color: #0a5060;
+  font-weight: 700;
+  color: #0b6a80;
 }
 
 .shareplex-feature p {
   margin: 0;
-  line-height: 1.55;
+  line-height: 1.7;
+  color: #4f6575;
 }
 
 .shareplex__tco-card {
@@ -370,12 +384,14 @@
 
 .shareplex__tco-card h3 {
   margin: 0 0 0.35rem 0;
-  color: #0a5060;
+  font-weight: 700;
+  color: #0b6a80;
 }
 
 .shareplex__tco-card p {
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
+  color: #4f6575;
 }
 
 .shareplex__features-row {
@@ -513,6 +529,7 @@
   color: #1c1c1c;
   background: transparent;
   text-align: center;
+  align-items: center;
 }
 
 .shareplex__specs-block h3 {
@@ -523,6 +540,8 @@
 
 .shareplex__specs-block {
   text-align: center;
+  width: min(820px, 92vw);
+  margin: 0 auto;
 }
 
 .shareplex__specs-block p {
@@ -547,4 +566,7 @@
   margin: 0.5rem 0 0;
   line-height: 1.6;
   text-align: center;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }

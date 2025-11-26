@@ -97,11 +97,12 @@
 
 .foglight-evolve__insight-title {
   margin: 0 auto clamp(1rem, 2.5vw, 1.5rem);
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: #0f6a7d;
+  letter-spacing: 0.12em;
+  color: #0b7288;
   text-align: center;
+  font-weight: 700;
 }
 
 .foglight-evolve__summary {
@@ -116,8 +117,9 @@
 
 .foglight-evolve__summary h3 {
   margin: 0 0 1rem;
-  font-size: clamp(1.4rem, 2.8vw, 1.8rem);
-  color: #0d2438;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: #0b6a80;
+  font-weight: 700;
 }
 
 .foglight-evolve__summary p {
@@ -128,9 +130,9 @@
 
 .foglight-evolve__testimonial h4 {
   margin: 0 0 1rem;
-  font-size: 1.15rem;
-  color: #0d2438;
-  font-weight: 600;
+  font-size: 1rem;
+  color: #0b6a80;
+  font-weight: 700;
 }
 
 .foglight-evolve__testimonial-media iframe {
@@ -158,8 +160,10 @@
 .foglight-evolve__cards-header h2 {
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  letter-spacing: 0.12em;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: #0b7288;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -182,10 +186,9 @@
 
 .foglight-card h3 {
   margin: 0;
-  font-size: 1.05rem;
-  color: #0a3a69;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 1rem;
+  color: #0b6a80;
+  font-weight: 700;
 }
 
 .foglight-card p {
@@ -222,9 +225,10 @@
 .foglight-evolve__demo-inner h2 {
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: clamp(1.4rem, 3vw, 1.9rem);
-  color: #0a3a69;
+  letter-spacing: 0.12em;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: #0b7288;
+  font-weight: 700;
 }
 
 .foglight-evolve__demo-video iframe {
@@ -246,8 +250,9 @@
 
 .foglight-evolve__demo-list h3 {
   margin: 0 0 1rem;
-  font-size: 1.2rem;
-  color: #0a3a69;
+  font-size: 1rem;
+  color: #0b6a80;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -283,9 +288,10 @@
 .foglight-evolve__resources-inner h2 {
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  color: #0a3a69;
+  letter-spacing: 0.12em;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: #0b7288;
+  font-weight: 700;
   text-align: center;
 }
 

@@ -28,9 +28,12 @@
   inset: 0;
   background: transparent;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: clamp(1rem, 4vw, 2.5rem);
+  gap: clamp(1.25rem, 4vw, 3rem);
+  padding: 0 clamp(1.5rem, 5vw, 4rem);
+  box-sizing: border-box;
   z-index: 1;
 }
 
@@ -38,8 +41,23 @@
   margin: 0;
   color: #ffffff;
   font-size: clamp(2rem, 6vw, 3.6rem);
-  text-align: center;
+  text-align: left;
+  max-width: 540px;
   z-index: 1;
+}
+
+.solarwinds__hero-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 1rem);
+}
+
+.solarwinds__hero-text {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .solarwinds__badge {
@@ -74,6 +92,29 @@
   height: clamp(220px, 45vw, 420px);
   border: 0;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .solarwinds__hero-overlay {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .solarwinds__hero h1 {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .solarwinds__badge {
+    margin-left: 0;
+  }
+
+  .solarwinds__finger {
+    align-self: center;
+    margin-left: 0;
+  }
 }
 
 .solarwinds__text-block {

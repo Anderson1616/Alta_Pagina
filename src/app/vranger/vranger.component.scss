@@ -82,9 +82,9 @@
 
 .vranger__assurance-brief p {
   margin: 0;
-  font-size: 1.05rem;
-  color: #1c1c1c;
-  font-weight: 600;
+  font-size: 1rem;
+  color: #0b6a80;
+  font-weight: 700;
   line-height: 1.6;
   text-align: left;
 }
@@ -99,13 +99,29 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  color: #1b1b1b;
+  color: #0f3a50;
+}
+
+.vranger__assurance-content p {
+  margin: 0;
+  color: #0f3a50;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.vranger__assurance-content strong {
+  color: #0b6a80;
+  font-size: 1rem;
+  font-weight: 700;
 }
 
 .vranger__assurance-content ul {
   margin: 0;
   padding-left: 1.25rem;
   line-height: 1.7;
+  color: #0b6a80;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 .vranger__features {
@@ -137,9 +153,16 @@
 
 .vranger__features-card h3 {
   margin: 1rem 0 0.5rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #0a5060;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b6a80;
+}
+
+.vranger__features-card h4 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b6a80;
 }
 
 .vranger__features-card p {
@@ -198,7 +221,8 @@
 
 .vranger-resource strong {
   font-size: 0.95rem;
-  color: #0a5060;
+  color: #0b6a80;
+  font-weight: 700;
 }
 
 .vranger-resource span {

@@ -168,8 +168,8 @@
 .kace__graphic img {
   width: min(1200px, 96vw);
   height: auto;
-  border-radius: 18px;
-  box-shadow: 0 30px 60px rgba(7, 24, 42, 0.12);
+  border-radius: 0;
+  box-shadow: none;
 }
 
 .kace__features {
@@ -191,18 +191,30 @@
   color: #1c1c1c;
 }
 
+.kace h2 {
+  margin: 0 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+  color: #0b6a80;
+  font-weight: 700;
+  text-align: left;
+}
+
 .kace__features-card h2 {
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.2em;
-  font-size: 1.4rem;
-  color: #0a3a69;
+  letter-spacing: 0.12em;
+  font-size: 1.1rem;
+  color: #0b6a80;
+  font-weight: 700;
 }
 
 .kace__features-card h3 {
   margin: 0;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b6a80;
 }
 
 .kace__features-card p {
@@ -231,16 +243,16 @@
 
 .kace__details-card h3 {
   margin: 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #0a3a69;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b6a80;
 }
 
 .kace__details-card h4 {
   margin: 1rem 0 0.5rem;
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #0a3a69;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0b6a80;
 }
 
 .kace__details-card p {
@@ -267,9 +279,10 @@
 .kace__resources-header h2 {
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 1.5rem;
-  color: #0a3a69;
+  letter-spacing: 0.12em;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  color: #0b6a80;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -335,9 +348,10 @@
 .kace__demo-inner header h2 {
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 1.5rem;
-  color: #0a3a69;
+  letter-spacing: 0.12em;
+  font-size: clamp(1.3rem, 3vw, 1.6rem);
+  color: #0b6a80;
+  font-weight: 700;
   align-self: center;
   text-align: center;
 }
@@ -360,4 +374,3 @@
   border: 0;
   display: block;
 }
-

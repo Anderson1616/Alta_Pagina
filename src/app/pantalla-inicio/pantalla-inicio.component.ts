@@ -239,7 +239,7 @@ export class PantallaInicioComponent implements OnInit, AfterViewInit {
         "Seguimiento de privilegios y actividad sospechosa.",
       ],
       tags: ["APM", "RUM", "Logs"],
-      routerLink: ["/change-auditor-training"],
+      routerLink: ["/change-auditor"],
     },
     {
       searchKey: "SolarWinds",
@@ -344,9 +344,15 @@ export class PantallaInicioComponent implements OnInit, AfterViewInit {
     private readonly sanitizer: DomSanitizer,
     private readonly router: Router,
     private readonly cartService: CartService,
+    private readonly host: ElementRef<HTMLElement>,
   ) {}
 
   ngOnInit(): void {
+    if (typeof window !== "undefined" && "scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+      window.scrollTo({ top: 0, behavior: "auto" });
+    }
+
     this.offices = this.officeDefinitions.map((office) => ({
       ...office,
       mapEmbed: this.sanitizer.bypassSecurityTrustResourceUrl(office.mapUrl),
@@ -364,6 +370,8 @@ export class PantallaInicioComponent implements OnInit, AfterViewInit {
     setTimeout(() => {
       this.updateProductSlideMetrics();
       this.updateTrainingSlideMetrics();
+      this.resetScrollToTop();
+      this.initScrollAnimations();
     });
   }
 
@@ -627,6 +635,63 @@ export class PantallaInicioComponent implements OnInit, AfterViewInit {
     }
 
     this.trainingSlideSize = cardWidth + gap;
+  }
+
+  private resetScrollToTop(): void {
+    if (typeof window === "undefined") {
+      return;
+    }
+    requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "auto" }));
+  }
+
+  private initScrollAnimations(): void {
+    if (typeof window === "undefined" || typeof IntersectionObserver === "undefined") {
+      return;
+    }
+
+    const main = this.host.nativeElement.querySelector("main");
+    if (!main) {
+      return;
+    }
+
+    const targets = Array.from(
+      main.querySelectorAll<HTMLElement>(
+        [
+          "section",
+          "article",
+          ".service-card",
+          ".product-card",
+          ".training-card",
+          ".digital-transformation-card",
+          ".products-header",
+          ".trainings-header",
+          ".about-card",
+          ".clients__header",
+          ".clients-carousel",
+        ].join(", "),
+      ),
+    );
+
+    if (!targets.length) {
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { root: null, threshold: 0.15 },
+    );
+
+    targets.forEach((el) => {
+      el.classList.add("animate-on-scroll");
+      observer.observe(el);
+    });
   }
 
   goToServicios(): void {
