@@ -1,0 +1,12 @@
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 64'>
+  <defs>
+    <linearGradient id='dyna' x1='0%' y1='0%' x2='100%' y2='100%'>
+      <stop offset='0%' stop-color='#00a8e0'/>
+      <stop offset='33%' stop-color='#7cc143'/>
+      <stop offset='66%' stop-color='#6c4cff'/>
+      <stop offset='100%' stop-color='#ffb511'/>
+    </linearGradient>
+  </defs>
+  <rect x='8' y='8' width='48' height='48' rx='12' fill='url(#dyna)' />
+  <text x='70' y='39' font-family="'Montserrat', Arial, sans-serif" font-size='26' font-weight='600' fill='#1c2a38'>dynatrace</text>
+</svg>
