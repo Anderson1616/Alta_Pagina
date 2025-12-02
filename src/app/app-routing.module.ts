@@ -2,13 +2,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
+  // Ruta por defecto: si la URL está vacía, manda a pantalla-inicio
+  { path: '', redirectTo: 'pantalla-inicio', pathMatch: 'full' },
+
+  // Módulo de pantalla de inicio
   {
-    path: '',
+    path: 'pantalla-inicio',
     loadChildren: () =>
       import('./pantalla-inicio/pantalla-inicio.module').then(
         (m) => m.PantallaInicioModule,
       ),
   },
+
   {
     path: 'servicios',
     loadChildren: () =>
@@ -34,9 +39,9 @@ const routes: Routes = [
   {
     path: 'nuestros-reconocimientos',
     loadChildren: () =>
-      import('./nuestros-reconocimientos/nuestros-reconocimientos.module').then(
-        (m) => m.NuestrosReconocimientosModule,
-      ),
+      import(
+        './nuestros-reconocimientos/nuestros-reconocimientos.module'
+      ).then((m) => m.NuestrosReconocimientosModule),
   },
   {
     path: 'quienes-somos',
@@ -56,15 +61,14 @@ const routes: Routes = [
     path: 'nuestras-marcas',
     loadChildren: () =>
       import('./nuestras-marcas/nuestras-marcas.module').then(
-        (m) => m.NuestrasMarcasModule,
-      ),
+        (m) => m.NuestrasMarcasModule),
   },
   {
     path: 'telepresencia-streaming',
     loadChildren: () =>
-      import('./telepresencia-streaming/telepresencia-streaming.module').then(
-        (m) => m.TelepresenciaStreamingModule,
-      ),
+      import(
+        './telepresencia-streaming/telepresencia-streaming.module'
+      ).then((m) => m.TelepresenciaStreamingModule),
   },
   {
     path: 'alta-news',
@@ -86,7 +90,9 @@ const routes: Routes = [
   {
     path: 'one-identity',
     loadChildren: () =>
-      import('./one-identity/one-identity.module').then((m) => m.OneIdentityModule),
+      import('./one-identity/one-identity.module').then(
+        (m) => m.OneIdentityModule,
+      ),
   },
   {
     path: 'kace',
@@ -126,14 +132,16 @@ const routes: Routes = [
   {
     path: 'toad-for-sql',
     loadChildren: () =>
-      import('./toad-for-sql/toad-for-sql.module').then((m) => m.ToadForSqlModule),
+      import('./toad-for-sql/toad-for-sql.module').then(
+        (m) => m.ToadForSqlModule,
+      ),
   },
   {
     path: 'change-auditor-training',
     loadChildren: () =>
-      import('./change-auditor-training/change-auditor-training.module').then(
-        (m) => m.ChangeAuditorTrainingModule,
-      ),
+      import(
+        './change-auditor-training/change-auditor-training.module'
+      ).then((m) => m.ChangeAuditorTrainingModule),
   },
   {
     path: 'change-auditor',
@@ -154,17 +162,19 @@ const routes: Routes = [
         (m) => m.SalasInteligentesModule,
       ),
   },
+
+  // Ruta comodín: cualquier ruta no encontrada regresa a pantalla-inicio
+  { path: '**', redirectTo: 'pantalla-inicio' },
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      scrollPositionRestoration: "top",
-      anchorScrolling: "enabled",
+      scrollPositionRestoration: 'top',
+      anchorScrolling: 'enabled',
       scrollOffset: [0, 0],
     }),
   ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
-
